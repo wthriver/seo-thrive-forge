@@ -4,78 +4,147 @@
     {
       "name": "web-development",
       "title": "Web Development in Bangladesh",
-      "description": "Custom web development solutions using modern frameworks like Next.js and React for businesses across Bangladesh",
-      "keywords": ["web development bangladesh", "custom websites bangladesh", "nextjs development bangladesh", "react development bangladesh"]
+      "description": "Custom web development solutions using modern frameworks like Next.js, React, and Vue.js for businesses across Bangladesh. Professional responsive websites with SEO optimization.",
+      "keywords": ["web development bangladesh", "custom websites bangladesh", "nextjs development bangladesh", "react development bangladesh", "responsive web design bangladesh"],
+      "pricing": "Starting from ৳25,000",
+      "deliveryTime": "2-4 weeks",
+      "features": ["Responsive Design", "SEO Optimized", "Fast Loading", "Mobile First", "Cross Browser Compatible", "CMS Integration"]
     },
     {
       "name": "ecommerce-development",
-      "title": "E-commerce Development in Bangladesh",
-      "description": "Scalable e-commerce solutions with integrated payment systems and inventory management for Bangladesh businesses",
-      "keywords": ["ecommerce development bangladesh", "online store bangladesh", "shopify development bangladesh", "woocommerce bangladesh"]
+      "title": "E-commerce Development in Bangladesh", 
+      "description": "Complete e-commerce solutions with payment gateway integration, inventory management, and order tracking for Bangladesh businesses. Shopify, WooCommerce, and custom platforms.",
+      "keywords": ["ecommerce development bangladesh", "online store bangladesh", "shopify development bangladesh", "woocommerce bangladesh", "payment gateway integration"],
+      "pricing": "Starting from ৳50,000",
+      "deliveryTime": "3-6 weeks",
+      "features": ["Payment Gateway Integration", "Inventory Management", "Order Tracking", "Multi-vendor Support", "Mobile Commerce", "Analytics Dashboard"]
     },
     {
       "name": "ui-ux-design",
-      "title": "UI/UX Design in Bangladesh",
-      "description": "User-centered design solutions that convert visitors into customers for Bangladesh companies",
-      "keywords": ["ui ux design bangladesh", "user experience bangladesh", "interface design bangladesh", "web design bangladesh"]
+      "title": "UI/UX Design Services in Bangladesh",
+      "description": "User-centered design solutions that convert visitors into customers. Complete UI/UX design services including wireframing, prototyping, and user research for Bangladesh companies.",
+      "keywords": ["ui ux design bangladesh", "user experience bangladesh", "interface design bangladesh", "web design bangladesh", "mobile app design bangladesh"],
+      "pricing": "Starting from ৳15,000",
+      "deliveryTime": "1-3 weeks", 
+      "features": ["User Research", "Wireframing", "Prototyping", "Design Systems", "Usability Testing", "Mobile Design"]
     },
     {
       "name": "digital-marketing",
-      "title": "Digital Marketing in Bangladesh",
-      "description": "SEO and digital marketing strategies to grow your online presence across Bangladesh",
-      "keywords": ["digital marketing bangladesh", "seo services bangladesh", "content marketing bangladesh", "ppc advertising bangladesh"]
-    }
-  ],
-  "locations": [
-    {
-      "name": "dhaka",
-      "title": "Dhaka",
-      "description": "Bangladesh's capital and largest city, home to the country's major business district",
-      "population": "9.5 million",
-      "businessHub": true
+      "title": "Digital Marketing Services in Bangladesh",
+      "description": "Complete digital marketing solutions including SEO, social media marketing, PPC campaigns, and content marketing to grow your online presence across Bangladesh.",
+      "keywords": ["digital marketing bangladesh", "seo services bangladesh", "social media marketing bangladesh", "ppc advertising bangladesh", "content marketing bangladesh"],
+      "pricing": "Starting from ৳20,000/month",
+      "deliveryTime": "Ongoing",
+      "features": ["SEO Optimization", "Social Media Management", "PPC Campaigns", "Content Creation", "Analytics Reporting", "Email Marketing"]
     },
     {
-      "name": "chittagong",
-      "title": "Chittagong",
-      "description": "Major port city and commercial hub of southeastern Bangladesh",
-      "population": "3.2 million",
-      "businessHub": true
+      "name": "mobile-app-development",
+      "title": "Mobile App Development in Bangladesh",
+      "description": "Native and cross-platform mobile app development for iOS and Android. React Native, Flutter, and native app development services for Bangladesh businesses.",
+      "keywords": ["mobile app development bangladesh", "ios app development bangladesh", "android app development bangladesh", "react native bangladesh", "flutter development bangladesh"],
+      "pricing": "Starting from ৳75,000",
+      "deliveryTime": "4-8 weeks",
+      "features": ["Cross-platform Development", "Native Performance", "App Store Optimization", "Push Notifications", "Offline Functionality", "API Integration"]
     },
     {
-      "name": "sylhet",
-      "title": "Sylhet",
-      "description": "Growing tech center in northeastern Bangladesh, known as the tea capital",
-      "population": "0.5 million",
-      "businessHub": false
+      "name": "software-development",
+      "title": "Custom Software Development in Bangladesh",
+      "description": "Enterprise-grade custom software solutions including CRM, ERP, and business management systems tailored for Bangladesh organizations.",
+      "keywords": ["software development bangladesh", "custom software bangladesh", "crm development bangladesh", "erp development bangladesh", "business software bangladesh"],
+      "pricing": "Starting from ৳100,000",
+      "deliveryTime": "6-12 weeks",
+      "features": ["Custom Solutions", "Database Design", "API Development", "Cloud Integration", "Security Implementation", "Maintenance Support"]
     },
     {
-      "name": "rajshahi",
-      "title": "Rajshahi",
-      "description": "Northern Bangladesh's silk city with growing business opportunities",
-      "population": "0.8 million",
-      "businessHub": false
+      "name": "wordpress-development",
+      "title": "WordPress Development in Bangladesh",
+      "description": "Professional WordPress website development, theme customization, plugin development, and maintenance services for businesses in Bangladesh.",
+      "keywords": ["wordpress development bangladesh", "wordpress website bangladesh", "wordpress customization bangladesh", "wordpress plugin development bangladesh"],
+      "pricing": "Starting from ৳18,000",
+      "deliveryTime": "1-3 weeks",
+      "features": ["Custom Themes", "Plugin Development", "Performance Optimization", "Security Setup", "Backup Solutions", "Content Migration"]
+    },
+    {
+      "name": "shopify-development",
+      "title": "Shopify Development in Bangladesh",
+      "description": "Complete Shopify store setup, theme customization, app integration, and optimization services for e-commerce businesses in Bangladesh.",
+      "keywords": ["shopify development bangladesh", "shopify store setup bangladesh", "shopify customization bangladesh", "shopify apps bangladesh"],
+      "pricing": "Starting from ৳35,000",
+      "deliveryTime": "2-4 weeks",
+      "features": ["Store Setup", "Theme Customization", "App Integration", "Payment Setup", "SEO Optimization", "Performance Tuning"]
+    },
+    {
+      "name": "graphic-design",
+      "title": "Graphic Design Services in Bangladesh",
+      "description": "Professional graphic design services including logo design, branding, print design, and digital graphics for businesses across Bangladesh.",
+      "keywords": ["graphic design bangladesh", "logo design bangladesh", "branding bangladesh", "print design bangladesh", "digital graphics bangladesh"],
+      "pricing": "Starting from ৳8,000",
+      "deliveryTime": "3-7 days",
+      "features": ["Logo Design", "Brand Identity", "Print Materials", "Digital Graphics", "Social Media Graphics", "Packaging Design"]
+    },
+    {
+      "name": "content-writing",
+      "title": "Content Writing Services in Bangladesh",
+      "description": "Professional content writing services including website content, blog posts, SEO articles, and copywriting for businesses in Bangladesh.",
+      "keywords": ["content writing bangladesh", "copywriting bangladesh", "blog writing bangladesh", "seo content bangladesh", "website content bangladesh"],
+      "pricing": "Starting from ৳500/article",
+      "deliveryTime": "1-5 days",
+      "features": ["SEO Writing", "Blog Posts", "Website Copy", "Product Descriptions", "Social Media Content", "Email Content"]
     }
   ],
   "industries": [
     {
       "name": "fintech",
-      "title": "Fintech",
-      "description": "Financial technology solutions for Bangladesh's growing digital payment sector"
+      "title": "Fintech Solutions",
+      "description": "Digital payment solutions, banking apps, and financial technology platforms for Bangladesh's growing fintech sector"
     },
     {
       "name": "healthcare",
-      "title": "Healthcare",
-      "description": "Digital health solutions for Bangladesh's healthcare sector"
+      "title": "Healthcare Technology",
+      "description": "Digital health platforms, telemedicine solutions, and healthcare management systems for Bangladesh's medical sector"
     },
     {
       "name": "education",
-      "title": "Education",
-      "description": "EdTech solutions for Bangladesh's educational institutions"
+      "title": "Education Technology",
+      "description": "E-learning platforms, school management systems, and educational apps for Bangladesh's education sector"
     },
     {
       "name": "retail",
-      "title": "Retail",
-      "description": "E-commerce and retail solutions for Bangladesh's consumer market"
+      "title": "Retail & E-commerce",
+      "description": "Online stores, inventory management, and retail solutions for Bangladesh's consumer market"
+    },
+    {
+      "name": "manufacturing",
+      "title": "Manufacturing Solutions",
+      "description": "Industrial automation, supply chain management, and manufacturing software for Bangladesh's industrial sector"
+    },
+    {
+      "name": "real-estate",
+      "title": "Real Estate Technology",
+      "description": "Property management systems, real estate portals, and PropTech solutions for Bangladesh's real estate market"
+    }
+  ],
+  "testimonials": [
+    {
+      "name": "Ahmed Hassan",
+      "company": "TechCorp Bangladesh",
+      "role": "CEO",
+      "content": "WebThriver transformed our business with their exceptional web development services. Our online sales increased by 300% within 6 months.",
+      "rating": 5
+    },
+    {
+      "name": "Fatima Rahman",
+      "company": "Digital Solutions Ltd",
+      "role": "Marketing Director", 
+      "content": "Their digital marketing expertise helped us reach customers across Bangladesh. Professional team with outstanding results.",
+      "rating": 5
+    },
+    {
+      "name": "Mohammad Ali",
+      "company": "E-commerce Plus",
+      "role": "Founder",
+      "content": "The e-commerce platform they built for us handles thousands of orders daily. Excellent technical support and ongoing maintenance.",
+      "rating": 5
     }
   ]
 }
