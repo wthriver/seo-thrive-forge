@@ -1,0 +1,81 @@
+
+{
+  "services": [
+    {
+      "name": "web-development",
+      "title": "Web Development",
+      "description": "Custom web development solutions using modern frameworks like Next.js and React",
+      "keywords": ["web development", "custom websites", "nextjs development", "react development"]
+    },
+    {
+      "name": "ecommerce-development",
+      "title": "E-commerce Development",
+      "description": "Scalable e-commerce solutions with integrated payment systems and inventory management",
+      "keywords": ["ecommerce development", "online store", "shopify development", "woocommerce"]
+    },
+    {
+      "name": "ui-ux-design",
+      "title": "UI/UX Design",
+      "description": "User-centered design solutions that convert visitors into customers",
+      "keywords": ["ui ux design", "user experience", "interface design", "web design"]
+    },
+    {
+      "name": "digital-marketing",
+      "title": "Digital Marketing",
+      "description": "SEO and digital marketing strategies to grow your online presence",
+      "keywords": ["digital marketing", "seo services", "content marketing", "ppc advertising"]
+    }
+  ],
+  "locations": [
+    {
+      "name": "dhaka",
+      "title": "Dhaka",
+      "description": "Bangladesh's capital and largest city, home to the country's major business district",
+      "population": "9.5 million",
+      "businessHub": true
+    },
+    {
+      "name": "chittagong",
+      "title": "Chittagong",
+      "description": "Major port city and commercial hub of southeastern Bangladesh",
+      "population": "3.2 million",
+      "businessHub": true
+    },
+    {
+      "name": "sylhet",
+      "title": "Sylhet",
+      "description": "Growing tech center in northeastern Bangladesh, known as the tea capital",
+      "population": "0.5 million",
+      "businessHub": false
+    },
+    {
+      "name": "rajshahi",
+      "title": "Rajshahi",
+      "description": "Northern Bangladesh's silk city with growing business opportunities",
+      "population": "0.8 million",
+      "businessHub": false
+    }
+  ],
+  "industries": [
+    {
+      "name": "fintech",
+      "title": "Fintech",
+      "description": "Financial technology solutions for Bangladesh's growing digital payment sector"
+    },
+    {
+      "name": "healthcare",
+      "title": "Healthcare",
+      "description": "Digital health solutions for Bangladesh's healthcare sector"
+    },
+    {
+      "name": "education",
+      "title": "Education",
+      "description": "EdTech solutions for Bangladesh's educational institutions"
+    },
+    {
+      "name": "retail",
+      "title": "Retail",
+      "description": "E-commerce and retail solutions for Bangladesh's consumer market"
+    }
+  ]
+}
