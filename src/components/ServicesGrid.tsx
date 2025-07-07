@@ -2,6 +2,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Globe, Search, Users, Zap } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const ServicesGrid = () => {
   const services = [
@@ -10,28 +11,32 @@ const ServicesGrid = () => {
       title: 'Web Development in Bangladesh',
       description: 'Custom Next.js applications with modern frameworks and optimal performance for businesses across Bangladesh',
       features: ['Next.js Development', 'React Applications', 'Full-Stack Solutions'],
-      coverage: 'Nationwide Coverage'
+      coverage: 'Nationwide Coverage',
+      link: '/web-development-bangladesh'
     },
     {
       icon: Zap,
       title: 'E-commerce Development in Bangladesh',
       description: 'Scalable online stores with integrated payment systems and inventory management for Bangladesh businesses',
       features: ['Shopify Development', 'WooCommerce', 'Custom Platforms'],
-      coverage: 'All Bangladesh'
+      coverage: 'All Bangladesh',
+      link: '/ecommerce-development-bangladesh'
     },
     {
       icon: Users,
       title: 'UI/UX Design in Bangladesh',
       description: 'User-centered design solutions that convert visitors into customers for Bangladesh companies',
       features: ['User Research', 'Prototyping', 'Design Systems'],
-      coverage: 'Remote & On-site'
+      coverage: 'Remote & On-site',
+      link: '/ui-ux-design-bangladesh'
     },
     {
       icon: Search,
       title: 'Digital Marketing in Bangladesh',
       description: 'SEO and digital marketing strategies to grow your online presence across Bangladesh',
       features: ['SEO Optimization', 'Content Strategy', 'PPC Campaigns'],
-      coverage: 'Bangladesh-wide Services'
+      coverage: 'Bangladesh-wide Services',
+      link: '/digital-marketing-bangladesh'
     }
   ];
 
@@ -76,11 +81,14 @@ const ServicesGrid = () => {
             </div>
             
             <Button 
+              asChild
               variant="outline" 
               className="w-full group-hover:bg-blue-600 group-hover:text-white transition-colors border-blue-200 group-hover:border-blue-600"
             >
-              Learn More
-              <ArrowRight className="ml-2 h-4 w-4" />
+              <Link to={service.link}>
+                Learn More
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
             </Button>
           </CardContent>
         </Card>
