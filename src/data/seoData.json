@@ -3,27 +3,27 @@
   "services": [
     {
       "name": "web-development",
-      "title": "Web Development",
-      "description": "Custom web development solutions using modern frameworks like Next.js and React",
-      "keywords": ["web development", "custom websites", "nextjs development", "react development"]
+      "title": "Web Development in Bangladesh",
+      "description": "Custom web development solutions using modern frameworks like Next.js and React for businesses across Bangladesh",
+      "keywords": ["web development bangladesh", "custom websites bangladesh", "nextjs development bangladesh", "react development bangladesh"]
     },
     {
       "name": "ecommerce-development",
-      "title": "E-commerce Development",
-      "description": "Scalable e-commerce solutions with integrated payment systems and inventory management",
-      "keywords": ["ecommerce development", "online store", "shopify development", "woocommerce"]
+      "title": "E-commerce Development in Bangladesh",
+      "description": "Scalable e-commerce solutions with integrated payment systems and inventory management for Bangladesh businesses",
+      "keywords": ["ecommerce development bangladesh", "online store bangladesh", "shopify development bangladesh", "woocommerce bangladesh"]
     },
     {
       "name": "ui-ux-design",
-      "title": "UI/UX Design",
-      "description": "User-centered design solutions that convert visitors into customers",
-      "keywords": ["ui ux design", "user experience", "interface design", "web design"]
+      "title": "UI/UX Design in Bangladesh",
+      "description": "User-centered design solutions that convert visitors into customers for Bangladesh companies",
+      "keywords": ["ui ux design bangladesh", "user experience bangladesh", "interface design bangladesh", "web design bangladesh"]
     },
     {
       "name": "digital-marketing",
-      "title": "Digital Marketing",
-      "description": "SEO and digital marketing strategies to grow your online presence",
-      "keywords": ["digital marketing", "seo services", "content marketing", "ppc advertising"]
+      "title": "Digital Marketing in Bangladesh",
+      "description": "SEO and digital marketing strategies to grow your online presence across Bangladesh",
+      "keywords": ["digital marketing bangladesh", "seo services bangladesh", "content marketing bangladesh", "ppc advertising bangladesh"]
     }
   ],
   "locations": [

@@ -7,31 +7,31 @@ const ServicesGrid = () => {
   const services = [
     {
       icon: Globe,
-      title: 'Web Development',
-      description: 'Custom Next.js applications with modern frameworks and optimal performance',
+      title: 'Web Development in Bangladesh',
+      description: 'Custom Next.js applications with modern frameworks and optimal performance for businesses across Bangladesh',
       features: ['Next.js Development', 'React Applications', 'Full-Stack Solutions'],
-      locations: ['Dhaka', 'Chittagong', 'Sylhet']
+      coverage: 'Nationwide Coverage'
     },
     {
       icon: Zap,
-      title: 'E-commerce Solutions',
-      description: 'Scalable online stores with integrated payment systems and inventory management',
+      title: 'E-commerce Development in Bangladesh',
+      description: 'Scalable online stores with integrated payment systems and inventory management for Bangladesh businesses',
       features: ['Shopify Development', 'WooCommerce', 'Custom Platforms'],
-      locations: ['Dhaka', 'Rajshahi', 'Barishal']
+      coverage: 'All Bangladesh'
     },
     {
       icon: Users,
-      title: 'UI/UX Design',
-      description: 'User-centered design solutions that convert visitors into customers',
+      title: 'UI/UX Design in Bangladesh',
+      description: 'User-centered design solutions that convert visitors into customers for Bangladesh companies',
       features: ['User Research', 'Prototyping', 'Design Systems'],
-      locations: ['Dhaka', 'Chittagong', 'Khulna']
+      coverage: 'Remote & On-site'
     },
     {
       icon: Search,
-      title: 'Digital Marketing',
-      description: 'SEO and digital marketing strategies to grow your online presence',
+      title: 'Digital Marketing in Bangladesh',
+      description: 'SEO and digital marketing strategies to grow your online presence across Bangladesh',
       features: ['SEO Optimization', 'Content Strategy', 'PPC Campaigns'],
-      locations: ['All Bangladesh', 'Remote Services']
+      coverage: 'Bangladesh-wide Services'
     }
   ];
 
@@ -69,17 +69,10 @@ const ServicesGrid = () => {
             </div>
             
             <div className="mb-6">
-              <h4 className="font-semibold text-slate-800 mb-3">Available in:</h4>
-              <div className="flex flex-wrap gap-2">
-                {service.locations.map((location, idx) => (
-                  <span 
-                    key={idx}
-                    className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium"
-                  >
-                    {location}
-                  </span>
-                ))}
-              </div>
+              <h4 className="font-semibold text-slate-800 mb-3">Service Area:</h4>
+              <span className="px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
+                {service.coverage}
+              </span>
             </div>
             
             <Button 
