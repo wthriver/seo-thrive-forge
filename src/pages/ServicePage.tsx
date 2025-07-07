@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { ArrowRight, CheckCircle, Globe, Users, Zap, Star, Smartphone, Code, ShoppingCart, Palette, PenTool, Search } from 'lucide-react';
+import { ArrowRight, CheckCircle, Globe, Users, Zap, Star, Smartphone, Code, ShoppingCart, Palette, PenTool, Search, Clock } from 'lucide-react';
 import seoData from '@/data/seoData.json';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
