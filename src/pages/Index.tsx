@@ -1,6 +1,6 @@
 
 import { Link } from 'react-router-dom';
-import { ChevronRight, ArrowRight, CheckCircle, Users, Globe, Zap, Star, Award, Target, Clock, Phone, Mail, MapPin } from 'lucide-react';
+import { ChevronRight, ArrowRight, CheckCircle, Users, Globe, Zap, Star, Award, Target, Clock, Phone, Mail, MapPin, Code, Smartphone, ShoppingCart } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import HeroSection from '@/components/HeroSection';
@@ -12,6 +12,9 @@ import Footer from '@/components/Footer';
 import seoData from '@/data/seoData.json';
 
 const Index = () => {
+  const featuredCountries = seoData.countries.slice(0, 8);
+  const featuredServices = seoData.services.slice(0, 6);
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
       <Navigation />
@@ -26,6 +29,50 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Global Reach Section */}
+      <section className="py-20 bg-slate-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent">
+                Serving Clients Worldwide
+              </h2>
+              <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+                We provide professional digital services to businesses across the globe, with local expertise and international standards.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              {featuredCountries.map((country, index) => (
+                <Card key={index} className="hover:shadow-lg transition-shadow group cursor-pointer">
+                  <CardContent className="p-6 text-center">
+                    <Link to={`/services/${country.code}`}>
+                      <MapPin className="w-8 h-8 text-blue-600 mx-auto mb-3" />
+                      <h3 className="font-semibold text-slate-800 group-hover:text-blue-600 transition-colors">
+                        {country.name}
+                      </h3>
+                      <p className="text-sm text-slate-600 mt-2">Digital Services</p>
+                    </Link>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+            
+            <div className="text-center mt-12">
+              <p className="text-slate-600 mb-6">
+                Available in United States, United Kingdom, Canada, Australia, Germany, France, UAE, Saudi Arabia, Bangladesh, Netherlands and more countries.
+              </p>
+              <Button asChild variant="outline" size="lg">
+                <Link to="/services">
+                  View All Countries
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Services Grid */}
       <section id="services" className="py-20">
         <div className="container mx-auto px-4">
@@ -34,7 +81,7 @@ const Index = () => {
               Our Digital Services
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-              From custom web development to complete digital transformation, we provide comprehensive solutions that help Bangladesh businesses thrive in the digital age.
+              From custom web development to complete digital transformation, we provide comprehensive solutions that help businesses thrive in the digital age.
             </p>
           </div>
           <ServicesGrid />
@@ -59,7 +106,7 @@ const Index = () => {
                 Why Choose WebThriver?
               </h2>
               <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-                We combine technical expertise with deep understanding of the Bangladesh market to deliver solutions that drive real business growth.
+                We combine technical expertise with deep understanding of global markets to deliver solutions that drive real business growth worldwide.
               </p>
             </div>
             
@@ -68,26 +115,26 @@ const Index = () => {
                 { 
                   icon: Award, 
                   title: 'Proven Track Record', 
-                  description: 'Over 500 successful projects delivered across various industries in Bangladesh with 98% client satisfaction rate.',
+                  description: 'Over 500 successful projects delivered across 10+ countries with 98% client satisfaction rate and measurable business impact.',
                   stat: '500+ Projects'
                 },
                 { 
                   icon: Users, 
-                  title: 'Expert Team', 
-                  description: 'Certified developers, designers, and digital marketers with extensive experience in modern technologies.',
+                  title: 'Expert Global Team', 
+                  description: 'Certified developers, designers, and digital marketers with extensive experience in modern technologies and international markets.',
                   stat: '50+ Experts'
                 },
                 { 
                   icon: Target, 
                   title: 'Results-Focused', 
-                  description: 'We measure success by your business growth. Every solution is designed to achieve measurable results.',
+                  description: 'We measure success by your business growth. Every solution is designed to achieve measurable results and ROI.',
                   stat: '300% Avg Growth'
                 },
                 { 
                   icon: Globe, 
-                  title: 'Latest Technology', 
-                  description: 'We use cutting-edge frameworks and tools to ensure your digital presence stays ahead of competition.',
-                  stat: 'Modern Tech Stack'
+                  title: 'Global Reach', 
+                  description: 'Serving clients in USA, UK, Canada, Australia, Germany, France, UAE, Saudi Arabia, Bangladesh, and Netherlands.',
+                  stat: '10+ Countries'
                 },
                 { 
                   icon: Clock, 
@@ -98,7 +145,7 @@ const Index = () => {
                 { 
                   icon: CheckCircle, 
                   title: 'Quality Assurance', 
-                  description: 'Rigorous testing, code reviews, and quality checks ensure every project meets the highest standards.',
+                  description: 'Rigorous testing, code reviews, and quality checks ensure every project meets the highest international standards.',
                   stat: 'Zero Defects'
                 }
               ].map((item, index) => (
@@ -120,21 +167,78 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Testimonials Section */}
+      {/* Service Highlights */}
       <section className="py-20 bg-slate-50">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent">
-                What Our Clients Say
+                Popular Services Worldwide
               </h2>
-              <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-                Don't just take our word for it. Here's what our satisfied clients have to say about our services.
+              <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+                Our most requested services that help businesses achieve digital transformation and growth.
               </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {seoData.testimonials.map((testimonial, index) => (
+              <Card className="hover:shadow-xl transition-shadow">
+                <CardContent className="p-8 text-center">
+                  <div className="p-4 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-xl w-16 h-16 mx-auto mb-6 flex items-center justify-center">
+                    <Globe className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold mb-4">Web Development</h3>
+                  <p className="text-slate-600 mb-6">Custom websites and web applications using React, Next.js, and modern frameworks.</p>
+                  <Button asChild className="w-full">
+                    <Link to="/web-development">Learn More</Link>
+                  </Button>
+                </CardContent>
+              </Card>
+              
+              <Card className="hover:shadow-xl transition-shadow">
+                <CardContent className="p-8 text-center">
+                  <div className="p-4 bg-gradient-to-r from-green-600 to-emerald-600 rounded-xl w-16 h-16 mx-auto mb-6 flex items-center justify-center">
+                    <Smartphone className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold mb-4">Mobile Apps</h3>
+                  <p className="text-slate-600 mb-6">Native and cross-platform mobile applications for iOS and Android platforms.</p>
+                  <Button asChild className="w-full">
+                    <Link to="/mobile-app-development">Learn More</Link>
+                  </Button>
+                </CardContent>
+              </Card>
+              
+              <Card className="hover:shadow-xl transition-shadow">
+                <CardContent className="p-8 text-center">
+                  <div className="p-4 bg-gradient-to-r from-purple-600 to-pink-600 rounded-xl w-16 h-16 mx-auto mb-6 flex items-center justify-center">
+                    <ShoppingCart className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold mb-4">E-commerce</h3>
+                  <p className="text-slate-600 mb-6">Complete online stores with payment integration and inventory management.</p>
+                  <Button asChild className="w-full">
+                    <Link to="/ecommerce-development">Learn More</Link>
+                  </Button>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent">
+                What Our Global Clients Say
+              </h2>
+              <p className="text-xl text-slate-600 max-w-2xl mx-auto">
+                Success stories from businesses across the world who have transformed their operations with our digital solutions.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {seoData.testimonials.slice(0, 6).map((testimonial, index) => (
                 <Card key={index} className="hover:shadow-lg transition-shadow bg-white">
                   <CardContent className="p-8">
                     <div className="flex mb-4">
@@ -147,6 +251,9 @@ const Index = () => {
                       <div className="font-semibold text-slate-800">{testimonial.name}</div>
                       <div className="text-sm text-slate-500">{testimonial.role}</div>
                       <div className="text-sm text-blue-600 font-medium">{testimonial.company}</div>
+                      <div className="text-xs text-slate-400 mt-1">
+                        {seoData.countries.find(c => c.code === testimonial.country)?.name}
+                      </div>
                     </div>
                   </CardContent>
                 </Card>
@@ -157,80 +264,26 @@ const Index = () => {
       </section>
 
       {/* Industries We Serve */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent">
-                Industries We Serve
-              </h2>
-              <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-                We have deep expertise across multiple industries, helping businesses of all sizes achieve their digital transformation goals.
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {seoData.industries.map((industry, index) => (
-                <Card key={index} className="hover:shadow-lg transition-shadow group cursor-pointer">
-                  <CardContent className="p-8 text-center">
-                    <h3 className="text-xl font-bold mb-4 text-slate-800 group-hover:text-blue-600 transition-colors">{industry.title}</h3>
-                    <p className="text-slate-600 leading-relaxed">{industry.description}</p>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Our Process */}
       <section className="py-20 bg-slate-50">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent">
-                Our Proven Process
+                Industries We Serve Globally
               </h2>
               <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-                A systematic approach that ensures every project is delivered on time, within budget, and exceeds expectations.
+                We have deep expertise across multiple industries, helping businesses of all sizes achieve their digital transformation goals worldwide.
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {[
-                { 
-                  step: '01', 
-                  title: 'Discovery & Planning', 
-                  desc: 'We start by understanding your business goals, target audience, and technical requirements through detailed consultation and market research.' 
-                },
-                { 
-                  step: '02', 
-                  title: 'Strategy & Design', 
-                  desc: 'Our team creates a comprehensive digital strategy with wireframes, mockups, and prototypes that align with your brand identity.' 
-                },
-                { 
-                  step: '03', 
-                  title: 'Development & Testing', 
-                  desc: 'Using agile methodology, we build your solution with regular updates, thorough testing, and quality assurance at every stage.' 
-                },
-                { 
-                  step: '04', 
-                  title: 'Launch & Support', 
-                  desc: 'We handle the deployment process and provide ongoing maintenance, updates, and technical support to ensure optimal performance.' 
-                }
-              ].map((process, index) => (
-                <div key={index} className="text-center relative">
-                  <div className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white w-20 h-20 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6 shadow-lg">
-                    {process.step}
-                  </div>
-                  <h3 className="text-xl font-bold mb-4 text-slate-800">{process.title}</h3>
-                  <p className="text-slate-600 leading-relaxed">{process.desc}</p>
-                  {index < 3 && (
-                    <div className="hidden lg:block absolute top-10 left-full w-full">
-                      <ArrowRight className="w-6 h-6 text-slate-300 mx-auto" />
-                    </div>
-                  )}
-                </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {seoData.industries.map((industry, index) => (
+                <Card key={index} className="hover:shadow-lg transition-shadow group cursor-pointer">
+                  <CardContent className="p-6 text-center">
+                    <h3 className="text-lg font-bold mb-3 text-slate-800 group-hover:text-blue-600 transition-colors">{industry.title}</h3>
+                    <p className="text-slate-600 text-sm leading-relaxed">{industry.description}</p>
+                  </CardContent>
+                </Card>
               ))}
             </div>
           </div>
@@ -242,10 +295,10 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent">
-              Ready to Get Started?
+              Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-slate-600 mb-8 leading-relaxed">
-              Let's discuss your project and create a digital solution that drives real business results.
+              Join hundreds of successful businesses worldwide who have chosen WebThriver for their digital transformation journey.
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
@@ -253,8 +306,8 @@ const Index = () => {
                 <div className="p-4 bg-blue-100 rounded-full mb-4">
                   <Phone className="w-8 h-8 text-blue-600" />
                 </div>
-                <h3 className="font-bold text-lg mb-2">Call Us</h3>
-                <p className="text-slate-600">+880 1700 000000</p>
+                <h3 className="font-bold text-lg mb-2">Global Support</h3>
+                <p className="text-slate-600">24/7 support in multiple timezones</p>
               </div>
               
               <div className="flex flex-col items-center">
@@ -269,8 +322,8 @@ const Index = () => {
                 <div className="p-4 bg-blue-100 rounded-full mb-4">
                   <MapPin className="w-8 h-8 text-blue-600" />
                 </div>
-                <h3 className="font-bold text-lg mb-2">Visit Us</h3>
-                <p className="text-slate-600">Dhaka, Bangladesh</p>
+                <h3 className="font-bold text-lg mb-2">Worldwide</h3>
+                <p className="text-slate-600">Serving 10+ countries globally</p>
               </div>
             </div>
             

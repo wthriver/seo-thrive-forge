@@ -1,150 +1,427 @@
 
 {
+  "countries": [
+    {
+      "code": "us",
+      "name": "United States",
+      "currency": "$",
+      "regions": ["North America"],
+      "popular_cities": ["New York", "Los Angeles", "Chicago", "Houston", "Phoenix"]
+    },
+    {
+      "code": "uk",
+      "name": "United Kingdom", 
+      "currency": "£",
+      "regions": ["Europe"],
+      "popular_cities": ["London", "Manchester", "Birmingham", "Leeds", "Glasgow"]
+    },
+    {
+      "code": "ca",
+      "name": "Canada",
+      "currency": "CAD $",
+      "regions": ["North America"],
+      "popular_cities": ["Toronto", "Vancouver", "Montreal", "Calgary", "Ottawa"]
+    },
+    {
+      "code": "au",
+      "name": "Australia",
+      "currency": "AUD $",
+      "regions": ["Oceania"],
+      "popular_cities": ["Sydney", "Melbourne", "Brisbane", "Perth", "Adelaide"]
+    },
+    {
+      "code": "de",
+      "name": "Germany",
+      "currency": "€",
+      "regions": ["Europe"],
+      "popular_cities": ["Berlin", "Munich", "Hamburg", "Cologne", "Frankfurt"]
+    },
+    {
+      "code": "fr",
+      "name": "France",
+      "currency": "€",
+      "regions": ["Europe"],
+      "popular_cities": ["Paris", "Lyon", "Marseille", "Toulouse", "Nice"]
+    },
+    {
+      "code": "ae",
+      "name": "United Arab Emirates",
+      "currency": "AED",
+      "regions": ["Middle East"],
+      "popular_cities": ["Dubai", "Abu Dhabi", "Sharjah", "Ajman", "Ras Al Khaimah"]
+    },
+    {
+      "code": "sa",
+      "name": "Saudi Arabia",
+      "currency": "SAR",
+      "regions": ["Middle East"],
+      "popular_cities": ["Riyadh", "Jeddah", "Mecca", "Medina", "Dammam"]
+    },
+    {
+      "code": "bd",
+      "name": "Bangladesh",
+      "currency": "৳",
+      "regions": ["South Asia"],
+      "popular_cities": ["Dhaka", "Chittagong", "Sylhet", "Rajshahi", "Khulna"]
+    },
+    {
+      "code": "nl",
+      "name": "Netherlands",
+      "currency": "€",
+      "regions": ["Europe"],
+      "popular_cities": ["Amsterdam", "Rotterdam", "The Hague", "Utrecht", "Eindhoven"]
+    }
+  ],
   "services": [
     {
-      "name": "web-development",
-      "title": "Web Development in Bangladesh",
-      "description": "Custom web development solutions using modern frameworks like Next.js, React, and Vue.js for businesses across Bangladesh. Professional responsive websites with SEO optimization.",
-      "keywords": ["web development bangladesh", "custom websites bangladesh", "nextjs development bangladesh", "react development bangladesh", "responsive web design bangladesh"],
-      "pricing": "Starting from ৳25,000",
-      "deliveryTime": "2-4 weeks",
-      "features": ["Responsive Design", "SEO Optimized", "Fast Loading", "Mobile First", "Cross Browser Compatible", "CMS Integration"]
+      "slug": "web-development",
+      "name": "Web Development",
+      "title": "Professional Web Development Services",
+      "short_description": "Custom web development solutions using modern frameworks and technologies",
+      "description": "Transform your business with professional web development services. We create responsive, SEO-optimized websites using cutting-edge technologies like React, Next.js, and Vue.js. Our expert developers deliver scalable solutions that drive growth and enhance user experience across all devices and platforms.",
+      "features": [
+        "Responsive Web Design",
+        "SEO Optimization",
+        "Fast Loading Performance",
+        "Mobile-First Approach",
+        "Cross-Browser Compatibility",
+        "CMS Integration",
+        "E-commerce Functionality",
+        "Progressive Web Apps (PWA)",
+        "API Integration",
+        "Custom Web Applications",
+        "Performance Optimization",
+        "Security Implementation"
+      ],
+      "technologies": ["React", "Next.js", "Vue.js", "Node.js", "TypeScript", "Tailwind CSS"],
+      "pricing": {
+        "us": "$2,500",
+        "uk": "£2,000",
+        "ca": "CAD $3,200",
+        "au": "AUD $3,800",
+        "de": "€2,200",
+        "fr": "€2,200",
+        "ae": "AED 9,000",
+        "sa": "SAR 9,500",
+        "bd": "৳25,000",
+        "nl": "€2,200"
+      },
+      "delivery_time": "2-6 weeks",
+      "process": [
+        "Requirements Analysis & Planning",
+        "UI/UX Design & Wireframing", 
+        "Development & Programming",
+        "Testing & Quality Assurance",
+        "Deployment & Launch",
+        "Maintenance & Support"
+      ]
     },
     {
-      "name": "ecommerce-development",
-      "title": "E-commerce Development in Bangladesh", 
-      "description": "Complete e-commerce solutions with payment gateway integration, inventory management, and order tracking for Bangladesh businesses. Shopify, WooCommerce, and custom platforms.",
-      "keywords": ["ecommerce development bangladesh", "online store bangladesh", "shopify development bangladesh", "woocommerce bangladesh", "payment gateway integration"],
-      "pricing": "Starting from ৳50,000",
-      "deliveryTime": "3-6 weeks",
-      "features": ["Payment Gateway Integration", "Inventory Management", "Order Tracking", "Multi-vendor Support", "Mobile Commerce", "Analytics Dashboard"]
+      "slug": "mobile-app-development",
+      "name": "Mobile App Development",
+      "title": "Native & Cross-Platform Mobile App Development",
+      "short_description": "iOS and Android app development with native performance and modern features",
+      "description": "Build powerful mobile applications that engage users and drive business growth. Our mobile development team creates native iOS and Android apps, as well as cross-platform solutions using React Native and Flutter. From concept to app store deployment, we deliver feature-rich mobile experiences.",
+      "features": [
+        "Native iOS Development",
+        "Native Android Development", 
+        "Cross-Platform Development",
+        "React Native Apps",
+        "Flutter Development",
+        "App Store Optimization",
+        "Push Notifications",
+        "In-App Purchases",
+        "Offline Functionality",
+        "Real-time Features",
+        "Social Media Integration",
+        "Analytics & Tracking"
+      ],
+      "technologies": ["React Native", "Flutter", "Swift", "Kotlin", "Firebase", "API Integration"],
+      "pricing": {
+        "us": "$8,000",
+        "uk": "£6,500",
+        "ca": "CAD $10,500",
+        "au": "AUD $12,000",
+        "de": "€7,200",
+        "fr": "€7,200",
+        "ae": "AED 29,000",
+        "sa": "SAR 30,000",
+        "bd": "৳75,000",
+        "nl": "€7,200"
+      },
+      "delivery_time": "4-12 weeks",
+      "process": [
+        "App Strategy & Planning",
+        "UI/UX Design for Mobile",
+        "Development & Programming",
+        "Testing on Multiple Devices",
+        "App Store Submission",
+        "Launch & Marketing Support"
+      ]
     },
     {
-      "name": "ui-ux-design",
-      "title": "UI/UX Design Services in Bangladesh",
-      "description": "User-centered design solutions that convert visitors into customers. Complete UI/UX design services including wireframing, prototyping, and user research for Bangladesh companies.",
-      "keywords": ["ui ux design bangladesh", "user experience bangladesh", "interface design bangladesh", "web design bangladesh", "mobile app design bangladesh"],
-      "pricing": "Starting from ৳15,000",
-      "deliveryTime": "1-3 weeks", 
-      "features": ["User Research", "Wireframing", "Prototyping", "Design Systems", "Usability Testing", "Mobile Design"]
+      "slug": "ecommerce-development",
+      "name": "E-commerce Development",
+      "title": "Complete E-commerce Solutions & Online Stores",
+      "short_description": "Full-featured e-commerce platforms with payment integration and inventory management",
+      "description": "Launch your online business with our comprehensive e-commerce development services. We build scalable online stores using platforms like Shopify, WooCommerce, and custom solutions. Our e-commerce websites include payment gateway integration, inventory management, order tracking, and conversion optimization features.",
+      "features": [
+        "Custom E-commerce Platforms",
+        "Shopify Development",
+        "WooCommerce Solutions",
+        "Payment Gateway Integration",
+        "Inventory Management",
+        "Order Tracking System",
+        "Multi-vendor Marketplace",
+        "Mobile Commerce",
+        "Shopping Cart Optimization",
+        "Product Catalog Management",
+        "Customer Account Portal",
+        "Analytics & Reporting"
+      ],
+      "technologies": ["Shopify", "WooCommerce", "Magento", "React", "Payment APIs", "Database Management"],
+      "pricing": {
+        "us": "$5,000",
+        "uk": "£4,000",
+        "ca": "CAD $6,500",
+        "au": "AUD $7,500",
+        "de": "€4,500",
+        "fr": "€4,500",
+        "ae": "AED 18,000",
+        "sa": "SAR 19,000",
+        "bd": "৳50,000",
+        "nl": "€4,500"
+      },
+      "delivery_time": "3-8 weeks",
+      "process": [
+        "E-commerce Strategy Planning",
+        "Platform Selection & Setup",
+        "Design & User Experience",
+        "Development & Integration",
+        "Payment & Security Setup",
+        "Launch & Optimization"
+      ]
     },
     {
-      "name": "digital-marketing",
-      "title": "Digital Marketing Services in Bangladesh",
-      "description": "Complete digital marketing solutions including SEO, social media marketing, PPC campaigns, and content marketing to grow your online presence across Bangladesh.",
-      "keywords": ["digital marketing bangladesh", "seo services bangladesh", "social media marketing bangladesh", "ppc advertising bangladesh", "content marketing bangladesh"],
-      "pricing": "Starting from ৳20,000/month",
-      "deliveryTime": "Ongoing",
-      "features": ["SEO Optimization", "Social Media Management", "PPC Campaigns", "Content Creation", "Analytics Reporting", "Email Marketing"]
+      "slug": "digital-marketing",
+      "name": "Digital Marketing",
+      "title": "Comprehensive Digital Marketing Services",
+      "short_description": "SEO, social media marketing, PPC advertising, and content marketing strategies",
+      "description": "Grow your online presence and reach your target audience with our comprehensive digital marketing services. We provide SEO optimization, social media marketing, PPC advertising, content marketing, and email marketing campaigns that drive traffic, generate leads, and increase conversions.",
+      "features": [
+        "Search Engine Optimization (SEO)",
+        "Social Media Marketing",
+        "Pay-Per-Click Advertising (PPC)",
+        "Content Marketing Strategy",
+        "Email Marketing Campaigns",
+        "Google Ads Management",
+        "Facebook & Instagram Ads",
+        "Analytics & Reporting",
+        "Conversion Rate Optimization",
+        "Local SEO Services",
+        "Influencer Marketing",
+        "Brand Strategy Development"
+      ],
+      "technologies": ["Google Analytics", "Google Ads", "Facebook Ads Manager", "SEO Tools", "Email Platforms"],
+      "pricing": {
+        "us": "$1,500/month",
+        "uk": "£1,200/month",
+        "ca": "CAD $2,000/month",
+        "au": "AUD $2,200/month",
+        "de": "€1,400/month",
+        "fr": "€1,400/month",
+        "ae": "AED 5,500/month",
+        "sa": "SAR 5,700/month",
+        "bd": "৳20,000/month",
+        "nl": "€1,400/month"
+      },
+      "delivery_time": "Ongoing",
+      "process": [
+        "Marketing Audit & Strategy",
+        "Campaign Planning & Setup",
+        "Content Creation & Optimization",
+        "Campaign Launch & Management",
+        "Performance Monitoring",
+        "Reporting & Optimization"
+      ]
     },
     {
-      "name": "mobile-app-development",
-      "title": "Mobile App Development in Bangladesh",
-      "description": "Native and cross-platform mobile app development for iOS and Android. React Native, Flutter, and native app development services for Bangladesh businesses.",
-      "keywords": ["mobile app development bangladesh", "ios app development bangladesh", "android app development bangladesh", "react native bangladesh", "flutter development bangladesh"],
-      "pricing": "Starting from ৳75,000",
-      "deliveryTime": "4-8 weeks",
-      "features": ["Cross-platform Development", "Native Performance", "App Store Optimization", "Push Notifications", "Offline Functionality", "API Integration"]
+      "slug": "ui-ux-design",
+      "name": "UI/UX Design",
+      "title": "User Experience & Interface Design Services",
+      "short_description": "User-centered design solutions that convert visitors into customers",
+      "description": "Create exceptional user experiences with our professional UI/UX design services. We conduct user research, create wireframes and prototypes, and design intuitive interfaces that enhance usability and drive conversions. Our designs are optimized for both web and mobile platforms.",
+      "features": [
+        "User Experience Research",
+        "User Interface Design",
+        "Wireframing & Prototyping",
+        "User Journey Mapping",
+        "Usability Testing",
+        "Design System Creation",
+        "Mobile App Design",
+        "Web Application Design",
+        "Brand Identity Design",
+        "Accessibility Compliance",
+        "Design Consultation",
+        "Interactive Prototypes"
+      ],
+      "technologies": ["Figma", "Adobe XD", "Sketch", "InVision", "Principle", "Framer"],
+      "pricing": {
+        "us": "$3,000",
+        "uk": "£2,400",
+        "ca": "CAD $3,900",
+        "au": "AUD $4,500",
+        "de": "€2,700",
+        "fr": "€2,700",
+        "ae": "AED 11,000",
+        "sa": "SAR 11,500",
+        "bd": "৳35,000",
+        "nl": "€2,700"
+      },
+      "delivery_time": "2-6 weeks",
+      "process": [
+        "User Research & Analysis",
+        "Information Architecture",
+        "Wireframing & Prototyping",
+        "Visual Design Creation",
+        "Usability Testing",
+        "Design Handoff & Support"
+      ]
     },
     {
-      "name": "software-development",
-      "title": "Custom Software Development in Bangladesh",
-      "description": "Enterprise-grade custom software solutions including CRM, ERP, and business management systems tailored for Bangladesh organizations.",
-      "keywords": ["software development bangladesh", "custom software bangladesh", "crm development bangladesh", "erp development bangladesh", "business software bangladesh"],
-      "pricing": "Starting from ৳100,000",
-      "deliveryTime": "6-12 weeks",
-      "features": ["Custom Solutions", "Database Design", "API Development", "Cloud Integration", "Security Implementation", "Maintenance Support"]
-    },
-    {
-      "name": "wordpress-development",
-      "title": "WordPress Development in Bangladesh",
-      "description": "Professional WordPress website development, theme customization, plugin development, and maintenance services for businesses in Bangladesh.",
-      "keywords": ["wordpress development bangladesh", "wordpress website bangladesh", "wordpress customization bangladesh", "wordpress plugin development bangladesh"],
-      "pricing": "Starting from ৳18,000",
-      "deliveryTime": "1-3 weeks",
-      "features": ["Custom Themes", "Plugin Development", "Performance Optimization", "Security Setup", "Backup Solutions", "Content Migration"]
-    },
-    {
-      "name": "shopify-development",
-      "title": "Shopify Development in Bangladesh",
-      "description": "Complete Shopify store setup, theme customization, app integration, and optimization services for e-commerce businesses in Bangladesh.",
-      "keywords": ["shopify development bangladesh", "shopify store setup bangladesh", "shopify customization bangladesh", "shopify apps bangladesh"],
-      "pricing": "Starting from ৳35,000",
-      "deliveryTime": "2-4 weeks",
-      "features": ["Store Setup", "Theme Customization", "App Integration", "Payment Setup", "SEO Optimization", "Performance Tuning"]
-    },
-    {
-      "name": "graphic-design",
-      "title": "Graphic Design Services in Bangladesh",
-      "description": "Professional graphic design services including logo design, branding, print design, and digital graphics for businesses across Bangladesh.",
-      "keywords": ["graphic design bangladesh", "logo design bangladesh", "branding bangladesh", "print design bangladesh", "digital graphics bangladesh"],
-      "pricing": "Starting from ৳8,000",
-      "deliveryTime": "3-7 days",
-      "features": ["Logo Design", "Brand Identity", "Print Materials", "Digital Graphics", "Social Media Graphics", "Packaging Design"]
-    },
-    {
-      "name": "content-writing",
-      "title": "Content Writing Services in Bangladesh",
-      "description": "Professional content writing services including website content, blog posts, SEO articles, and copywriting for businesses in Bangladesh.",
-      "keywords": ["content writing bangladesh", "copywriting bangladesh", "blog writing bangladesh", "seo content bangladesh", "website content bangladesh"],
-      "pricing": "Starting from ৳500/article",
-      "deliveryTime": "1-5 days",
-      "features": ["SEO Writing", "Blog Posts", "Website Copy", "Product Descriptions", "Social Media Content", "Email Content"]
+      "slug": "software-development",
+      "name": "Custom Software Development",
+      "title": "Enterprise Software Solutions & Custom Applications",
+      "short_description": "Tailored software solutions for business automation and efficiency",
+      "description": "Transform your business operations with custom software development services. We build enterprise-grade applications, CRM systems, ERP solutions, and business management tools tailored to your specific requirements. Our software solutions improve efficiency, automate processes, and scale with your business growth.",
+      "features": [
+        "Custom Business Applications",
+        "Enterprise Resource Planning (ERP)",
+        "Customer Relationship Management (CRM)",
+        "Database Design & Management",
+        "API Development & Integration",
+        "Cloud-Based Solutions",
+        "Legacy System Modernization",
+        "Business Process Automation",
+        "Reporting & Analytics Tools",
+        "Security Implementation",
+        "System Integration",
+        "Maintenance & Support"
+      ],
+      "technologies": ["Java", "Python", "C#", ".NET", "Node.js", "Cloud Platforms", "Databases"],
+      "pricing": {
+        "us": "$15,000",
+        "uk": "£12,000",
+        "ca": "CAD $19,500",
+        "au": "AUD $22,500",
+        "de": "€13,500",
+        "fr": "€13,500",
+        "ae": "AED 55,000",
+        "sa": "SAR 56,000",
+        "bd": "৳150,000",
+        "nl": "€13,500"
+      },
+      "delivery_time": "8-24 weeks",
+      "process": [
+        "Requirements Gathering",
+        "System Architecture Design",
+        "Development & Programming",
+        "Testing & Quality Assurance",
+        "Deployment & Integration",
+        "Training & Support"
+      ]
     }
   ],
   "industries": [
     {
       "name": "fintech",
-      "title": "Fintech Solutions",
-      "description": "Digital payment solutions, banking apps, and financial technology platforms for Bangladesh's growing fintech sector"
+      "title": "Financial Technology",
+      "description": "Digital payment solutions, banking applications, cryptocurrency platforms, and financial management systems for the evolving fintech sector."
     },
     {
       "name": "healthcare",
-      "title": "Healthcare Technology",
-      "description": "Digital health platforms, telemedicine solutions, and healthcare management systems for Bangladesh's medical sector"
+      "title": "Healthcare & Medical",
+      "description": "Telemedicine platforms, patient management systems, medical device integration, and healthcare analytics solutions for improved patient care."
     },
     {
       "name": "education",
       "title": "Education Technology",
-      "description": "E-learning platforms, school management systems, and educational apps for Bangladesh's education sector"
+      "description": "E-learning platforms, student management systems, virtual classrooms, and educational content delivery solutions for modern learning."
     },
     {
       "name": "retail",
       "title": "Retail & E-commerce",
-      "description": "Online stores, inventory management, and retail solutions for Bangladesh's consumer market"
+      "description": "Online marketplaces, inventory management systems, point-of-sale solutions, and customer engagement platforms for retail businesses."
     },
     {
       "name": "manufacturing",
-      "title": "Manufacturing Solutions",
-      "description": "Industrial automation, supply chain management, and manufacturing software for Bangladesh's industrial sector"
+      "title": "Manufacturing & Industry",
+      "description": "Industrial automation, supply chain management, quality control systems, and IoT solutions for manufacturing operations."
     },
     {
       "name": "real-estate",
-      "title": "Real Estate Technology",
-      "description": "Property management systems, real estate portals, and PropTech solutions for Bangladesh's real estate market"
+      "title": "Real Estate & Property",
+      "description": "Property management platforms, real estate marketplaces, virtual tours, and CRM solutions for real estate professionals."
+    },
+    {
+      "name": "logistics",
+      "title": "Logistics & Transportation",
+      "description": "Fleet management systems, shipment tracking, route optimization, and warehouse management solutions for logistics companies."
+    },
+    {
+      "name": "hospitality",
+      "title": "Hospitality & Tourism",
+      "description": "Hotel booking systems, restaurant management, travel planning platforms, and customer service solutions for hospitality businesses."
     }
   ],
   "testimonials": [
     {
-      "name": "Ahmed Hassan",
-      "company": "TechCorp Bangladesh",
+      "name": "Sarah Johnson",
+      "company": "TechCorp Solutions",
       "role": "CEO",
-      "content": "WebThriver transformed our business with their exceptional web development services. Our online sales increased by 300% within 6 months.",
-      "rating": 5
+      "content": "WebThriver delivered an exceptional e-commerce platform that increased our online sales by 400% within the first quarter. Their attention to detail and technical expertise is unmatched.",
+      "rating": 5,
+      "country": "us"
     },
     {
-      "name": "Fatima Rahman",
-      "company": "Digital Solutions Ltd",
-      "role": "Marketing Director", 
-      "content": "Their digital marketing expertise helped us reach customers across Bangladesh. Professional team with outstanding results.",
-      "rating": 5
+      "name": "James Mitchell",
+      "company": "Digital Innovations Ltd",
+      "role": "CTO",
+      "content": "The mobile app they developed for us has over 100,000 downloads and excellent user ratings. Professional team with outstanding project management skills.",
+      "rating": 5,
+      "country": "uk"
     },
     {
-      "name": "Mohammad Ali",
-      "company": "E-commerce Plus",
+      "name": "Ahmed Al-Rashid",
+      "company": "Emirates Business Group",
+      "role": "Marketing Director",
+      "content": "Their digital marketing strategies helped us expand across the Middle East market. ROI increased by 300% within 6 months of implementation.",
+      "rating": 5,
+      "country": "ae"
+    },
+    {
+      "name": "Maria Schmidt",
+      "company": "Innovation Hub Berlin",
       "role": "Founder",
-      "content": "The e-commerce platform they built for us handles thousands of orders daily. Excellent technical support and ongoing maintenance.",
-      "rating": 5
+      "content": "WebThriver's custom software solution streamlined our operations and improved efficiency by 250%. Excellent technical support and ongoing maintenance.",
+      "rating": 5,
+      "country": "de"
+    },
+    {
+      "name": "David Chen",
+      "company": "Sydney Digital Agency",
+      "role": "Creative Director",
+      "content": "The UI/UX design they created for our platform is intuitive and beautiful. User engagement increased significantly after the redesign.",
+      "rating": 5,
+      "country": "au"
+    },
+    {
+      "name": "Rahman Hassan",
+      "company": "Dhaka Tech Solutions",
+      "role": "Managing Director",
+      "content": "Outstanding web development services that transformed our business. Professional approach, timely delivery, and excellent post-launch support.",
+      "rating": 5,
+      "country": "bd"
     }
   ]
 }
