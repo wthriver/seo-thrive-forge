@@ -75,11 +75,11 @@ const ServicesOverview = () => {
                     <div className="mb-4">
                       <div className="flex justify-between items-center mb-2">
                         <span className="text-sm text-slate-500">Starting Price:</span>
-                        <span className="font-semibold text-green-600">{service.pricing}</span>
+                        <span className="font-semibold text-green-600">{service.pricing.bd}</span>
                       </div>
                       <div className="flex justify-between items-center">
                         <span className="text-sm text-slate-500">Delivery:</span>
-                        <span className="font-semibold text-blue-600">{service.deliveryTime}</span>
+                        <span className="font-semibold text-blue-600">{service.delivery_time}</span>
                       </div>
                     </div>
                     
