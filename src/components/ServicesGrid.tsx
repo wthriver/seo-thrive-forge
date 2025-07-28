@@ -2,7 +2,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Globe, Search, Users, Zap, Smartphone, Code, ShoppingCart, Palette, PenTool } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import HardLink from './HardLink';
 import seoData from '@/data/seoData.json';
 
 const ServicesGrid = () => {
@@ -29,7 +29,7 @@ const ServicesGrid = () => {
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       {featuredServices.map((service, index) => {
         const ServiceIcon = getServiceIcon(service.name);
-        const serviceUrl = `/${service.name.replace(/_/g, '-')}-bangladesh`;
+        const serviceUrl = `/${service.slug}-bangladesh`;
         
         return (
           <Card 
@@ -73,15 +73,13 @@ const ServicesGrid = () => {
                 </ul>
               </div>
               
-              <Button 
-                asChild
-                className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 group-hover:shadow-lg transition-all"
+              <HardLink 
+                to={serviceUrl}
+                className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 group-hover:shadow-lg transition-all text-white px-4 py-2 rounded-md font-medium flex items-center justify-center"
               >
-                <Link to={serviceUrl}>
-                  Get Started
-                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                </Link>
-              </Button>
+                Get Started
+                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+              </HardLink>
             </CardContent>
           </Card>
         );

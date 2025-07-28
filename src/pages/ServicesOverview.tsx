@@ -1,5 +1,5 @@
 
-import { Link } from 'react-router-dom';
+import HardLink from '@/components/HardLink';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight, Globe, Zap, Users, Search, Smartphone, Code, ShoppingCart, Palette, PenTool } from 'lucide-react';
@@ -51,7 +51,7 @@ const ServicesOverview = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {seoData.services.map((service, index) => {
               const ServiceIcon = getServiceIcon(service.name);
-              const serviceUrl = `/${service.name.replace(/_/g, '-')}-bangladesh`;
+              const serviceUrl = `/${service.slug}-bangladesh`;
               
               return (
                 <Card 
@@ -95,15 +95,13 @@ const ServicesOverview = () => {
                       </div>
                     </div>
                     
-                    <Button 
-                      asChild
-                      className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700"
+                    <HardLink 
+                      to={serviceUrl}
+                      className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-4 py-2 rounded-md font-medium flex items-center justify-center"
                     >
-                      <Link to={serviceUrl}>
-                        Learn More
-                        <ArrowRight className="ml-2 h-4 w-4" />
-                      </Link>
-                    </Button>
+                      Learn More
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </HardLink>
                   </CardContent>
                 </Card>
               );

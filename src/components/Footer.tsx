@@ -1,6 +1,6 @@
 
-import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
+import HardLink from './HardLink';
 
 const Footer = () => {
   return (
@@ -8,9 +8,9 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-2">
-            <Link to="/" className="text-3xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent block">
+            <HardLink to="/" className="text-3xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent block">
               WebThriver
-            </Link>
+            </HardLink>
             <p className="text-slate-400 mb-6 text-lg">
               Leading digital transformation company in Bangladesh. We help businesses grow with custom web development, e-commerce solutions, and digital marketing services.
             </p>
@@ -27,23 +27,23 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold mb-6 text-lg">Services</h4>
             <ul className="space-y-3 text-slate-400">
-              <li><Link to="/web-development-bangladesh" className="hover:text-white transition-colors">Web Development</Link></li>
-              <li><Link to="/ecommerce-development-bangladesh" className="hover:text-white transition-colors">E-commerce Development</Link></li>
-              <li><Link to="/ui-ux-design-bangladesh" className="hover:text-white transition-colors">UI/UX Design</Link></li>
-              <li><Link to="/digital-marketing-bangladesh" className="hover:text-white transition-colors">Digital Marketing</Link></li>
-              <li><Link to="/mobile-app-development-bangladesh" className="hover:text-white transition-colors">Mobile App Development</Link></li>
-              <li><Link to="/software-development-bangladesh" className="hover:text-white transition-colors">Software Development</Link></li>
+              <li><HardLink to="/web-development-bangladesh" className="hover:text-white transition-colors">Web Development</HardLink></li>
+              <li><HardLink to="/ecommerce-development-bangladesh" className="hover:text-white transition-colors">E-commerce Development</HardLink></li>
+              <li><HardLink to="/ui-ux-design-bangladesh" className="hover:text-white transition-colors">UI/UX Design</HardLink></li>
+              <li><HardLink to="/digital-marketing-bangladesh" className="hover:text-white transition-colors">Digital Marketing</HardLink></li>
+              <li><HardLink to="/mobile-app-development-bangladesh" className="hover:text-white transition-colors">Mobile App Development</HardLink></li>
+              <li><HardLink to="/software-development-bangladesh" className="hover:text-white transition-colors">Software Development</HardLink></li>
             </ul>
           </div>
           
           <div>
             <h4 className="font-semibold mb-6 text-lg">Company</h4>
             <ul className="space-y-3 text-slate-400">
-              <li><Link to="/about" className="hover:text-white transition-colors">About Us</Link></li>
-              <li><Link to="/portfolio" className="hover:text-white transition-colors">Portfolio</Link></li>
-              <li><Link to="/services" className="hover:text-white transition-colors">All Services</Link></li>
-              <li><Link to="/blog" className="hover:text-white transition-colors">Blog</Link></li>
-              <li><Link to="/contact" className="hover:text-white transition-colors">Contact</Link></li>
+              <li><HardLink to="/about" className="hover:text-white transition-colors">About Us</HardLink></li>
+              <li><HardLink to="/portfolio" className="hover:text-white transition-colors">Portfolio</HardLink></li>
+              <li><HardLink to="/services" className="hover:text-white transition-colors">All Services</HardLink></li>
+              <li><HardLink to="/blog" className="hover:text-white transition-colors">Blog</HardLink></li>
+              <li><HardLink to="/contact" className="hover:text-white transition-colors">Contact</HardLink></li>
             </ul>
             
             <div className="mt-8">
@@ -60,8 +60,8 @@ const Footer = () => {
         <div className="border-t border-slate-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-slate-400">© 2024 WebThriver. All rights reserved.</p>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <Link to="#" className="text-slate-400 hover:text-white transition-colors">Privacy Policy</Link>
-            <Link to="#" className="text-slate-400 hover:text-white transition-colors">Terms of Service</Link>
+            <HardLink to="#" className="text-slate-400 hover:text-white transition-colors">Privacy Policy</HardLink>
+            <HardLink to="#" className="text-slate-400 hover:text-white transition-colors">Terms of Service</HardLink>
           </div>
         </div>
       </div>
