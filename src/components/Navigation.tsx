@@ -21,6 +21,7 @@ const Navigation = () => {
             <Link to="/services" className="text-slate-600 hover:text-blue-600 transition-colors">Services</Link>
             <Link to="/about" className="text-slate-600 hover:text-blue-600 transition-colors">About</Link>
             <Link to="/portfolio" className="text-slate-600 hover:text-blue-600 transition-colors">Portfolio</Link>
+            <Link to="/blog" className="text-slate-600 hover:text-blue-600 transition-colors">Blog</Link>
             <Link to="/contact" className="text-slate-600 hover:text-blue-600 transition-colors">Contact</Link>
           </div>
 
@@ -47,6 +48,7 @@ const Navigation = () => {
               <Link to="/services" className="text-slate-600 hover:text-blue-600 transition-colors">Services</Link>
               <Link to="/about" className="text-slate-600 hover:text-blue-600 transition-colors">About</Link>
               <Link to="/portfolio" className="text-slate-600 hover:text-blue-600 transition-colors">Portfolio</Link>
+              <Link to="/blog" className="text-slate-600 hover:text-blue-600 transition-colors">Blog</Link>
               <Link to="/contact" className="text-slate-600 hover:text-blue-600 transition-colors">Contact</Link>
               <Button className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 w-full">
                 Get Quote

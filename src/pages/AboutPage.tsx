@@ -1,14 +1,22 @@
 
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Users, Award, Target, Globe, ArrowRight } from 'lucide-react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
+import SEOHead from '@/components/SEOHead';
 
 const AboutPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
+      <SEOHead
+        title="About WebThriver - Bangladesh's Leading Digital Transformation Company"
+        description="Learn about WebThriver's journey from a small team to Bangladesh's top digital agency. 500+ successful projects, 50+ experts, and 5+ years of excellence."
+        keywords="about webthriver, digital agency bangladesh, web development company, bangladesh tech company"
+        canonical="https://webthriver.com/about"
+      />
       <Navigation />
 
       {/* Hero Section */}

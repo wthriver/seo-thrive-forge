@@ -1,26 +1,102 @@
 
 import { Link } from 'react-router-dom';
-import { ChevronRight, ArrowRight, CheckCircle, Users, Globe, Zap, Star, Award, Target, Clock, Phone, Mail, MapPin, Code, Smartphone, ShoppingCart } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import HeroSection from '@/components/HeroSection';
-import ServicesGrid from '@/components/ServicesGrid';
-import StatsCounter from '@/components/StatsCounter';
-import CTASection from '@/components/CTASection';
+import { ArrowRight, CheckCircle, Star, Users, Award, TrendingUp, Globe, Smartphone, ShoppingCart, Phone, Mail, MapPin, Clock, Target } from 'lucide-react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
+import ServicesGrid from '@/components/ServicesGrid';
+import StatsCounter from '@/components/StatsCounter';
+import BlogSection from '@/components/BlogSection';
+import SEOHead from '@/components/SEOHead';
 import seoData from '@/data/seoData.json';
 
 const Index = () => {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "WebThriver",
+    "url": "https://webthriver.com",
+    "logo": "https://webthriver.com/logo.png",
+    "description": "Leading digital agency in Bangladesh providing web development, e-commerce, mobile apps, and digital marketing services.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "BD",
+      "addressLocality": "Dhaka"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+880-1700-000000",
+      "contactType": "customer service",
+      "email": "hello@webthriver.com"
+    },
+    "sameAs": [
+      "https://facebook.com/webthriver",
+      "https://linkedin.com/company/webthriver"
+    ]
+  };
+
   const featuredCountries = seoData.countries.slice(0, 8);
   const featuredServices = seoData.services.slice(0, 6);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
+      <SEOHead
+        title="WebThriver - Leading Digital Agency in Bangladesh | Web Development & Digital Marketing"
+        description="Transform your business with WebThriver's expert web development, e-commerce, mobile apps, and digital marketing services. Trusted by 500+ businesses in Bangladesh."
+        keywords="web development bangladesh, digital marketing, e-commerce development, mobile app development, ui ux design, software development"
+        canonical="https://webthriver.com"
+        structuredData={structuredData}
+      />
       <Navigation />
 
       {/* Hero Section */}
-      <HeroSection />
+      <section className="py-20 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50" />
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+              <span className="bg-gradient-to-r from-slate-900 via-blue-900 to-indigo-900 bg-clip-text text-transparent">
+                Transform Your Business
+              </span>
+              <br />
+              <span className="text-3xl md:text-4xl text-blue-600">
+                Digitally with WebThriver
+              </span>
+            </h1>
+            <p className="text-xl md:text-2xl text-slate-600 mb-8 leading-relaxed">
+              Leading digital agency providing world-class web development, e-commerce solutions, mobile apps, and digital marketing services to businesses worldwide.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+              <Button size="lg" className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 px-8 py-4 text-lg group">
+                <Link to="/contact" className="flex items-center">
+                  Start Your Project
+                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </Button>
+              <Button variant="outline" size="lg" className="border-2 border-slate-300 hover:border-blue-400 px-8 py-4 text-lg">
+                View Our Work
+              </Button>
+            </div>
+
+            <div className="flex flex-wrap justify-center gap-4">
+              <div className="flex items-center px-3 py-2 bg-white/60 backdrop-blur-sm rounded-full border border-slate-200">
+                <CheckCircle className="w-4 h-4 mr-2 text-green-600" />
+                <span className="text-slate-700 font-medium">500+ Projects Delivered</span>
+              </div>
+              <div className="flex items-center px-3 py-2 bg-white/60 backdrop-blur-sm rounded-full border border-slate-200">
+                <Star className="w-4 h-4 mr-2 text-yellow-500" />
+                <span className="text-slate-700 font-medium">5-Star Client Rating</span>
+              </div>
+              <div className="flex items-center px-3 py-2 bg-white/60 backdrop-blur-sm rounded-full border border-slate-200">
+                <Globe className="w-4 h-4 mr-2 text-blue-600" />
+                <span className="text-slate-700 font-medium">10+ Countries Served</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Stats Section */}
       <section className="py-16 bg-white">
@@ -342,8 +418,33 @@ const Index = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <CTASection />
+      {/* Blog Section */}
+      <BlogSection />
+
+      {/* Final CTA Section */}
+      <section className="py-20 bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Ready to Scale Your Business?
+            </h2>
+            <p className="text-xl text-blue-100 mb-8">
+              Join hundreds of successful businesses who have transformed their operations with our digital solutions.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button size="lg" className="bg-white text-blue-900 hover:bg-blue-50 px-8 py-4 text-lg font-semibold">
+                <Link to="/contact" className="flex items-center">
+                  Get Started Today
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+              </Button>
+              <Button variant="outline" size="lg" className="border-2 border-blue-300 text-white hover:bg-blue-800 px-8 py-4 text-lg">
+                View Pricing
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <Footer />
     </div>

@@ -1,14 +1,60 @@
 
+import { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Phone, Mail, MapPin, Clock, Send } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, Send, CheckCircle } from 'lucide-react';
+import { useToast } from "@/components/ui/use-toast";
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 
 const ContactPage = () => {
+  const { toast } = useToast();
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: '',
+    service: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    // Simulate form submission
+    await new Promise(resolve => setTimeout(resolve, 2000));
+
+    toast({
+      title: "Message Sent Successfully!",
+      description: "We'll get back to you within 24 hours.",
+      action: <CheckCircle className="h-4 w-4" />,
+    });
+
+    // Reset form
+    setFormData({
+      firstName: '',
+      lastName: '',
+      email: '',
+      phone: '',
+      service: '',
+      message: ''
+    });
+    setIsSubmitting(false);
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
       <Navigation />
+
+      {/* SEO Meta Tags */}
+      <title>Contact WebThriver - Get Your Free Digital Consultation Today</title>
 
       {/* Hero Section */}
       <section className="py-20 relative overflow-hidden">
@@ -36,7 +82,7 @@ const ContactPage = () => {
               <Card className="bg-white/80 backdrop-blur-sm">
                 <CardContent className="p-8">
                   <h2 className="text-3xl font-bold mb-6 text-slate-800">Send Us a Message</h2>
-                  <form className="space-y-6">
+                  <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div>
                         <label className="block text-sm font-medium text-slate-700 mb-2">
@@ -44,6 +90,9 @@ const ContactPage = () => {
                         </label>
                         <input
                           type="text"
+                          name="firstName"
+                          value={formData.firstName}
+                          onChange={handleInputChange}
                           className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                           placeholder="John"
                           required
@@ -55,6 +104,9 @@ const ContactPage = () => {
                         </label>
                         <input
                           type="text"
+                          name="lastName"
+                          value={formData.lastName}
+                          onChange={handleInputChange}
                           className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                           placeholder="Doe"
                           required
@@ -68,6 +120,9 @@ const ContactPage = () => {
                       </label>
                       <input
                         type="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleInputChange}
                         className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                         placeholder="john@example.com"
                         required
@@ -80,6 +135,9 @@ const ContactPage = () => {
                       </label>
                       <input
                         type="tel"
+                        name="phone"
+                        value={formData.phone}
+                        onChange={handleInputChange}
                         className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                         placeholder="+880 1700 000000"
                       />
@@ -89,13 +147,19 @@ const ContactPage = () => {
                       <label className="block text-sm font-medium text-slate-700 mb-2">
                         Service Interested In
                       </label>
-                      <select className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                      <select 
+                        name="service"
+                        value={formData.service}
+                        onChange={handleInputChange}
+                        className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      >
                         <option value="">Select a service</option>
                         <option value="web-development">Web Development</option>
                         <option value="ecommerce">E-commerce Development</option>
                         <option value="ui-ux">UI/UX Design</option>
                         <option value="digital-marketing">Digital Marketing</option>
                         <option value="mobile-app">Mobile App Development</option>
+                        <option value="software-development">Software Development</option>
                         <option value="other">Other</option>
                       </select>
                     </div>
@@ -105,6 +169,9 @@ const ContactPage = () => {
                         Project Details *
                       </label>
                       <textarea
+                        name="message"
+                        value={formData.message}
+                        onChange={handleInputChange}
                         rows={6}
                         className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                         placeholder="Tell us about your project requirements, timeline, and budget..."
@@ -112,8 +179,13 @@ const ContactPage = () => {
                       ></textarea>
                     </div>
                     
-                    <Button type="submit" size="lg" className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700">
-                      Send Message
+                    <Button 
+                      type="submit" 
+                      size="lg" 
+                      disabled={isSubmitting}
+                      className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 disabled:opacity-50"
+                    >
+                      {isSubmitting ? 'Sending...' : 'Send Message'}
                       <Send className="ml-2 h-5 w-5" />
                     </Button>
                   </form>
