@@ -52,7 +52,7 @@ const CountryServicePage = ({ service }: CountryServicePageProps) => {
     },
     {
       question: `What is the cost of ${serviceData.name.toLowerCase()} services in ${countryData.name}?`,
-      answer: `Our ${serviceData.name.toLowerCase()} services in ${countryData.name} start from ${serviceData.pricing[country]}. The final cost depends on project complexity, features required, and timeline. We provide detailed quotes after understanding your specific requirements.`
+      answer: `Our ${serviceData.name.toLowerCase()} services in ${countryData.name} start from ${serviceData.pricing[country as keyof typeof serviceData.pricing] || serviceData.pricing.bd}. The final cost depends on project complexity, features required, and timeline. We provide detailed quotes after understanding your specific requirements.`
     },
     {
       question: `How long does a ${serviceData.name.toLowerCase()} project take in ${countryData.name}?`,
@@ -99,7 +99,7 @@ const CountryServicePage = ({ service }: CountryServicePageProps) => {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Button size="lg" className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 px-8 py-4 text-lg group">
-                Get Started - {serviceData.pricing[country]}
+                Get Started - {serviceData.pricing[country as keyof typeof serviceData.pricing] || serviceData.pricing.bd}
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Button>
               <Button variant="outline" size="lg" className="border-2 border-slate-300 hover:border-blue-400 px-8 py-4 text-lg">
@@ -145,7 +145,7 @@ const CountryServicePage = ({ service }: CountryServicePageProps) => {
                 },
                 { 
                   title: 'Competitive Pricing', 
-                  description: `Transparent pricing starting from ${serviceData.pricing[country]} with no hidden costs. Flexible payment options tailored for ${countryData.name} businesses.` 
+                  description: `Transparent pricing starting from ${serviceData.pricing[country as keyof typeof serviceData.pricing] || serviceData.pricing.bd} with no hidden costs. Flexible payment options tailored for ${countryData.name} businesses.` 
                 },
                 { 
                   title: 'Latest Technology', 
@@ -318,7 +318,7 @@ const CountryServicePage = ({ service }: CountryServicePageProps) => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 px-8 py-4 text-lg">
                 <Link to="/contact" className="flex items-center">
-                  Start Your Project - {serviceData.pricing[country]}
+                  Start Your Project - {serviceData.pricing[country as keyof typeof serviceData.pricing] || serviceData.pricing.bd}
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
