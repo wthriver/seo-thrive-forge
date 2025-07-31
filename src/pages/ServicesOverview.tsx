@@ -6,8 +6,30 @@ import { ArrowRight, Globe, Zap, Users, Search, Smartphone, Code, ShoppingCart, 
 import seoData from '@/data/seoData.json';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
+import SEOHead from '@/components/SEOHead';
 
 const ServicesOverview = () => {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "WebThriver",
+    "url": "https://webthriver.com",
+    "description": "Complete overview of professional digital services including web development, mobile app development, e-commerce solutions, and digital marketing",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog", 
+      "name": "Digital Services",
+      "itemListElement": seoData.services.map((service, index) => ({
+        "@type": "Offer",
+        "position": index + 1,
+        "itemOffered": {
+          "@type": "Service",
+          "name": service.title,
+          "description": service.description
+        }
+      }))
+    }
+  };
+
   const getServiceIcon = (serviceName: string) => {
     switch (serviceName) {
       case 'web-development': return Globe;
@@ -26,6 +48,15 @@ const ServicesOverview = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
+      <SEOHead
+        title="Our Services - Complete Digital Solutions | WebThriver"
+        description="Comprehensive digital services including web development, mobile app development, e-commerce solutions, UI/UX design, digital marketing, and software development across Bangladesh and globally."
+        keywords="digital services, web development, mobile app development, e-commerce development, digital marketing, UI/UX design, software development, Bangladesh, professional services"
+        canonical="https://webthriver.com/services"
+        ogTitle="Our Services - Complete Digital Solutions | WebThriver"
+        ogDescription="Transform your business with our comprehensive digital services. Professional web development, mobile apps, e-commerce, and digital marketing solutions."
+        structuredData={structuredData}
+      />
       <Navigation />
 
       {/* Hero Section */}
@@ -50,7 +81,7 @@ const ServicesOverview = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {seoData.services.map((service, index) => {
-              const ServiceIcon = getServiceIcon(service.name);
+              const ServiceIcon = getServiceIcon(service.slug);
               const serviceUrl = `/${service.slug}-bangladesh`;
               
               return (

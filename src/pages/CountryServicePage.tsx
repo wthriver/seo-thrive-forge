@@ -1,12 +1,14 @@
 
 import { useEffect } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight, CheckCircle, Globe, Users, Zap, Star, Smartphone, Code, ShoppingCart, Palette, PenTool, Search, Clock, MapPin, Phone, Mail } from 'lucide-react';
 import seoData from '@/data/seoData.json';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
+import SEOHead from '@/components/SEOHead';
+import HardLink from '@/components/HardLink';
 
 interface CountryServicePageProps {
   service: string;
@@ -17,14 +19,27 @@ const CountryServicePage = ({ service }: CountryServicePageProps) => {
   const serviceData = seoData.services.find(s => s.slug === service);
   const countryData = seoData.countries.find(c => c.code === country);
 
-  useEffect(() => {
-    if (serviceData && countryData) {
-      document.title = `${serviceData.title} in ${countryData.name} | WebThriver`;
-      document.querySelector('meta[name="description"]')?.setAttribute('content', 
-        `Professional ${serviceData.name.toLowerCase()} services in ${countryData.name}. ${serviceData.short_description}. Contact us for a free consultation.`
-      );
+  const structuredData = serviceData && countryData ? {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": `${serviceData.title} in ${countryData.name}`,
+    "description": `Professional ${serviceData.name.toLowerCase()} services in ${countryData.name}. ${serviceData.description}`,
+    "provider": {
+      "@type": "Organization",
+      "name": "WebThriver",
+      "url": "https://webthriver.com",
+      "areaServed": {
+        "@type": "Country",
+        "name": countryData.name
+      }
+    },
+    "serviceType": serviceData.name,
+    "offers": {
+      "@type": "Offer",
+      "price": serviceData.pricing[country as keyof typeof serviceData.pricing] || serviceData.pricing.bd,
+      "priceCurrency": countryData.currency
     }
-  }, [serviceData, countryData]);
+  } : null;
 
   if (!serviceData || !countryData) {
     return <div>Service or country not found</div>;
@@ -70,6 +85,17 @@ const CountryServicePage = ({ service }: CountryServicePageProps) => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
+      {serviceData && countryData && (
+        <SEOHead
+          title={`${serviceData.title} in ${countryData.name} | WebThriver`}
+          description={`Professional ${serviceData.name.toLowerCase()} services in ${countryData.name}. ${serviceData.description}. Contact us for a free consultation.`}
+          keywords={`${serviceData.name}, ${countryData.name}, ${serviceData.technologies.join(', ')}, professional digital services`}
+          canonical={`https://webthriver.com/${service}/${country}`}
+          ogTitle={`${serviceData.title} in ${countryData.name} | WebThriver`}
+          ogDescription={`Professional ${serviceData.name.toLowerCase()} services in ${countryData.name}. Starting from ${serviceData.pricing[country as keyof typeof serviceData.pricing] || serviceData.pricing.bd}.`}
+          structuredData={structuredData}
+        />
+      )}
       <Navigation />
 
       {/* Hero Section */}
@@ -316,15 +342,17 @@ const CountryServicePage = ({ service }: CountryServicePageProps) => {
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 px-8 py-4 text-lg">
-                <Link to="/contact" className="flex items-center">
+              <HardLink to="/contact">
+                <Button size="lg" className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 px-8 py-4 text-lg">
                   Start Your Project - {serviceData.pricing[country as keyof typeof serviceData.pricing] || serviceData.pricing.bd}
                   <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-              </Button>
-              <Button variant="outline" size="lg" className="border-2 border-slate-300 hover:border-blue-400 px-8 py-4 text-lg">
-                Get Free Quote
-              </Button>
+                </Button>
+              </HardLink>
+              <HardLink to="/contact">
+                <Button variant="outline" size="lg" className="border-2 border-slate-300 hover:border-blue-400 px-8 py-4 text-lg">
+                  Get Free Quote
+                </Button>
+              </HardLink>
             </div>
           </div>
         </div>

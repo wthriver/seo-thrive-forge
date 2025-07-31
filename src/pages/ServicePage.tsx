@@ -1,12 +1,13 @@
 
 import { useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight, CheckCircle, Globe, Users, Zap, Star, Smartphone, Code, ShoppingCart, Palette, PenTool, Search, Clock, MapPin, Award, Target } from 'lucide-react';
 import seoData from '@/data/seoData.json';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
+import SEOHead from '@/components/SEOHead';
+import HardLink from '@/components/HardLink';
 
 interface ServicePageProps {
   service: string;
@@ -15,12 +16,23 @@ interface ServicePageProps {
 const ServicePage = ({ service }: ServicePageProps) => {
   const serviceData = seoData.services.find(s => s.slug === service);
 
-  useEffect(() => {
-    if (serviceData) {
-      document.title = `${serviceData.title} | WebThriver`;
-      document.querySelector('meta[name="description"]')?.setAttribute('content', serviceData.description);
+  const structuredData = serviceData ? {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": serviceData.title,
+    "description": serviceData.description,
+    "provider": {
+      "@type": "Organization",
+      "name": "WebThriver",
+      "url": "https://webthriver.com"
+    },
+    "serviceType": serviceData.name,
+    "offers": {
+      "@type": "Offer",
+      "price": serviceData.pricing.bd,
+      "priceCurrency": "BDT"
     }
-  }, [serviceData]);
+  } : null;
 
   if (!serviceData) {
     return <div>Service not found</div>;
@@ -67,6 +79,17 @@ const ServicePage = ({ service }: ServicePageProps) => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
+      {serviceData && (
+        <SEOHead
+          title={`${serviceData.title} | WebThriver`}
+          description={serviceData.description}
+          keywords={`${serviceData.name}, ${serviceData.technologies.join(', ')}, professional digital services, Bangladesh`}
+          canonical={`https://webthriver.com/${service}`}
+          ogTitle={`${serviceData.title} | WebThriver`}
+          ogDescription={serviceData.description}
+          structuredData={structuredData}
+        />
+      )}
       <Navigation />
 
       {/* Hero Section */}
@@ -202,7 +225,7 @@ const ServicePage = ({ service }: ServicePageProps) => {
               {availableCountries.map((country, index) => (
                 <Card key={index} className="hover:shadow-lg transition-shadow group cursor-pointer">
                   <CardContent className="p-6">
-                    <Link to={`/${service}/${country.code}`} className="block">
+                    <HardLink to={`/${service}/${country.code}`} className="block hover:no-underline">
                       <div className="flex items-center mb-4">
                         <MapPin className="w-6 h-6 text-blue-600 mr-3" />
                         <h3 className="text-xl font-semibold group-hover:text-blue-600 transition-colors">
@@ -214,23 +237,23 @@ const ServicePage = ({ service }: ServicePageProps) => {
                       </p>
                       <div className="flex justify-between items-center">
                         <span className="text-green-600 font-semibold">
-                          Starting from {serviceData.pricing[country.code]}
+                          Starting from {serviceData.pricing[country.code as keyof typeof serviceData.pricing] || serviceData.pricing.bd}
                         </span>
                         <ArrowRight className="w-5 h-5 text-blue-600 group-hover:translate-x-1 transition-transform" />
                       </div>
-                    </Link>
+                    </HardLink>
                   </CardContent>
                 </Card>
               ))}
             </div>
             
             <div className="text-center mt-12">
-              <Button asChild size="lg" className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700">
-                <Link to="/services">
+              <HardLink to="/services">
+                <Button size="lg" className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700">
                   View All Countries
                   <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-              </Button>
+                </Button>
+              </HardLink>
             </div>
           </div>
         </div>
@@ -323,15 +346,17 @@ const ServicePage = ({ service }: ServicePageProps) => {
               Let's discuss your {serviceData.name.toLowerCase()} project and create a solution that drives real business results.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-white text-blue-900 hover:bg-blue-50 px-8 py-4 text-lg font-semibold">
-                <Link to="/contact" className="flex items-center">
+              <HardLink to="/contact">
+                <Button size="lg" className="bg-white text-blue-900 hover:bg-blue-50 px-8 py-4 text-lg font-semibold">
                   Start Your Project
                   <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-              </Button>
-              <Button variant="outline" size="lg" className="border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 text-lg">
-                Get Free Consultation
-              </Button>
+                </Button>
+              </HardLink>
+              <HardLink to="/contact">
+                <Button variant="outline" size="lg" className="border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 text-lg">
+                  Get Free Consultation
+                </Button>
+              </HardLink>
             </div>
           </div>
         </div>

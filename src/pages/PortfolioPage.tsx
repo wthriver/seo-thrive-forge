@@ -1,12 +1,43 @@
 
-import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ExternalLink, ArrowRight } from 'lucide-react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
+import SEOHead from '@/components/SEOHead';
+import HardLink from '@/components/HardLink';
 
 const PortfolioPage = () => {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "WebThriver",
+    "url": "https://webthriver.com",
+    "description": "Professional digital services portfolio showcasing successful web development, mobile app development, and digital marketing projects",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Digital Services Portfolio",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Web Development",
+            "description": "Custom web development solutions"
+          }
+        },
+        {
+          "@type": "Offer", 
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Mobile App Development",
+            "description": "Cross-platform mobile applications"
+          }
+        }
+      ]
+    }
+  };
+
   const projects = [
     {
       title: "BanglaShop E-commerce Platform",
@@ -54,6 +85,15 @@ const PortfolioPage = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
+      <SEOHead
+        title="Portfolio - Our Successful Digital Projects | WebThriver"
+        description="Discover our portfolio of successful digital projects including web development, mobile apps, e-commerce solutions, and digital marketing campaigns delivered across Bangladesh and globally."
+        keywords="portfolio, web development projects, mobile app projects, digital marketing campaigns, e-commerce websites, successful projects, case studies"
+        canonical="https://webthriver.com/portfolio"
+        ogTitle="Portfolio - Our Successful Digital Projects | WebThriver"
+        ogDescription="Explore our portfolio showcasing successful digital transformation projects and their measurable business results."
+        structuredData={structuredData}
+      />
       <Navigation />
 
       {/* Hero Section */}
@@ -133,12 +173,12 @@ const PortfolioPage = () => {
             <p className="text-xl text-blue-100 mb-8">
               Let's create your next digital success story together.
             </p>
-            <Button asChild size="lg" className="bg-white text-blue-900 hover:bg-blue-50 px-8 py-4 text-lg font-semibold">
-              <Link to="/contact">
+            <HardLink to="/contact">
+              <Button size="lg" className="bg-white text-blue-900 hover:bg-blue-50 px-8 py-4 text-lg font-semibold">
                 Start Your Project
                 <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-            </Button>
+              </Button>
+            </HardLink>
           </div>
         </div>
       </section>

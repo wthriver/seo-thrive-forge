@@ -28,7 +28,7 @@ const ServicesGrid = () => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       {featuredServices.map((service, index) => {
-        const ServiceIcon = getServiceIcon(service.name);
+        const ServiceIcon = getServiceIcon(service.slug);
         const serviceUrl = `/${service.slug}-bangladesh`;
         
         return (

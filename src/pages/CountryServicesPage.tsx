@@ -1,25 +1,38 @@
 
 import { useEffect } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight, Globe, Search, Smartphone, Code, ShoppingCart, Palette, MapPin, Star, Clock } from 'lucide-react';
 import seoData from '@/data/seoData.json';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
+import SEOHead from '@/components/SEOHead';
+import HardLink from '@/components/HardLink';
 
 const CountryServicesPage = () => {
   const { country } = useParams();
   const countryData = seoData.countries.find(c => c.code === country);
 
-  useEffect(() => {
-    if (countryData) {
-      document.title = `Digital Services in ${countryData.name} | WebThriver`;
-      document.querySelector('meta[name="description"]')?.setAttribute('content', 
-        `Professional digital services in ${countryData.name}. Web development, mobile apps, e-commerce, and digital marketing solutions for businesses in ${countryData.name}.`
-      );
-    }
-  }, [countryData]);
+  const structuredData = countryData ? {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "WebThriver",
+    "url": "https://webthriver.com",
+    "description": `Professional digital services in ${countryData.name}`,
+    "areaServed": {
+      "@type": "Country",
+      "name": countryData.name
+    },
+    "serviceType": [
+      "Web Development",
+      "Mobile App Development",
+      "E-commerce Development",
+      "Digital Marketing",
+      "UI/UX Design",
+      "Software Development"
+    ]
+  } : null;
 
   if (!countryData) {
     return <div>Country not found</div>;
@@ -41,6 +54,17 @@ const CountryServicesPage = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
+      {countryData && (
+        <SEOHead
+          title={`Digital Services in ${countryData.name} | WebThriver`}
+          description={`Professional digital services in ${countryData.name}. Web development, mobile apps, e-commerce, and digital marketing solutions for businesses in ${countryData.name}.`}
+          keywords={`digital services, ${countryData.name}, web development, mobile app development, e-commerce, digital marketing, UI/UX design, software development`}
+          canonical={`https://webthriver.com/services/${country}`}
+          ogTitle={`Digital Services in ${countryData.name} | WebThriver`}
+          ogDescription={`Transform your business with professional digital services in ${countryData.name}. Local expertise, global standards.`}
+          structuredData={structuredData}
+        />
+      )}
       <Navigation />
 
       {/* Hero Section */}
@@ -146,15 +170,12 @@ const CountryServicesPage = () => {
                         </ul>
                       </div>
                       
-                      <Button 
-                        asChild
-                        className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 group-hover:shadow-lg transition-all"
-                      >
-                        <Link to={serviceUrl}>
+                      <HardLink to={serviceUrl}>
+                        <Button className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 group-hover:shadow-lg transition-all">
                           Learn More
                           <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                        </Link>
-                      </Button>
+                        </Button>
+                      </HardLink>
                     </CardContent>
                   </Card>
                 );
@@ -276,15 +297,17 @@ const CountryServicesPage = () => {
               Join hundreds of successful businesses in {countryData.name} who have chosen WebThriver for their digital transformation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-white text-blue-900 hover:bg-blue-50 px-8 py-4 text-lg font-semibold">
-                <Link to="/contact" className="flex items-center">
+              <HardLink to="/contact">
+                <Button size="lg" className="bg-white text-blue-900 hover:bg-blue-50 px-8 py-4 text-lg font-semibold">
                   Start Your Project
                   <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-              </Button>
-              <Button variant="outline" size="lg" className="border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 text-lg">
-                Get Free Consultation
-              </Button>
+                </Button>
+              </HardLink>
+              <HardLink to="/contact">
+                <Button variant="outline" size="lg" className="border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 text-lg">
+                  Get Free Consultation
+                </Button>
+              </HardLink>
             </div>
           </div>
         </div>
