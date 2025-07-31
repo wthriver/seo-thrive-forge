@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import HardLink from '@/components/HardLink';
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight, Calendar, User, Search } from 'lucide-react';
 import Navigation from '@/components/Navigation';
@@ -6,6 +6,39 @@ import Footer from '@/components/Footer';
 import SEOHead from '@/components/SEOHead';
 
 const BlogPage = () => {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "WebThriver Blog",
+    "description": "Digital marketing, web development insights and business growth strategies",
+    "url": "https://webthriver.com/blog",
+    "publisher": {
+      "@type": "Organization",
+      "name": "WebThriver",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://webthriver.com/logo.png"
+      }
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://webthriver.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://webthriver.com/blog"
+        }
+      ]
+    }
+  };
+
   const blogPosts = [
     {
       title: "10 Essential Features Every E-commerce Website Needs in 2024",
@@ -70,8 +103,12 @@ const BlogPage = () => {
       <SEOHead
         title="WebThriver Blog - Digital Marketing & Web Development Insights"
         description="Stay updated with the latest trends, tips, and strategies in web development, digital marketing, and business growth from WebThriver's expert team."
-        keywords="web development blog, digital marketing tips, bangladesh tech blog, seo guide, ecommerce development"
+        keywords="web development blog, digital marketing tips, bangladesh tech blog, seo guide, ecommerce development, business growth strategies"
         canonical="https://webthriver.com/blog"
+        ogTitle="WebThriver Blog - Expert Digital Marketing & Development Insights"
+        ogDescription="Get the latest insights on web development, digital marketing, and business growth strategies from Bangladesh's leading digital agency."
+        ogImage="https://webthriver.com/og-blog.jpg"
+        structuredData={structuredData}
       />
       <Navigation />
 
@@ -164,13 +201,13 @@ const BlogPage = () => {
                     
                     <div className="flex items-center justify-between">
                       <span className="text-sm text-slate-500">{post.readTime}</span>
-                      <Link 
+                      <HardLink 
                         to="/blog/article" 
                         className="text-blue-600 hover:text-blue-700 font-medium group-hover:translate-x-1 transition-transform inline-flex items-center"
                       >
                         Read More
                         <ArrowRight className="ml-1 h-4 w-4" />
-                      </Link>
+                      </HardLink>
                     </div>
                   </CardContent>
                 </Card>

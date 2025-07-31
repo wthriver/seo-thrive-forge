@@ -6,9 +6,57 @@ import { Phone, Mail, MapPin, Clock, Send, CheckCircle } from 'lucide-react';
 import { useToast } from "@/components/ui/use-toast";
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
+import SEOHead from '@/components/SEOHead';
 
 const ContactPage = () => {
   const { toast } = useToast();
+  
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "mainEntity": {
+      "@type": "LocalBusiness",
+      "name": "WebThriver",
+      "image": "https://webthriver.com/logo.png",
+      "url": "https://webthriver.com",
+      "telephone": "+880 1700 000000",
+      "email": "hello@webthriver.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "BD",
+        "addressLocality": "Dhaka",
+        "addressRegion": "Dhaka Division"
+      },
+      "openingHours": [
+        "Mo-Fr 09:00-18:00",
+        "Sa 10:00-16:00"
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "250",
+        "bestRating": "5"
+      },
+      "priceRange": "$$$"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://webthriver.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Contact",
+          "item": "https://webthriver.com/contact"
+        }
+      ]
+    }
+  };
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -51,10 +99,17 @@ const ContactPage = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
+      <SEOHead
+        title="Contact WebThriver - Get Your Free Digital Consultation Today"
+        description="Contact WebThriver for professional web development, digital marketing, and e-commerce solutions in Bangladesh. Free consultation available. Call +880 1700 000000."
+        keywords="contact webthriver, digital agency contact, web development bangladesh, free consultation, digital marketing services"
+        canonical="https://webthriver.com/contact"
+        ogTitle="Contact WebThriver - Free Digital Consultation"
+        ogDescription="Get in touch with Bangladesh's leading digital agency. Free consultation for web development, e-commerce, and digital marketing projects."
+        ogImage="https://webthriver.com/og-contact.jpg"
+        structuredData={structuredData}
+      />
       <Navigation />
-
-      {/* SEO Meta Tags */}
-      <title>Contact WebThriver - Get Your Free Digital Consultation Today</title>
 
       {/* Hero Section */}
       <section className="py-20 relative overflow-hidden">

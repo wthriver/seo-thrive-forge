@@ -1,6 +1,5 @@
 
-import { useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import HardLink from '@/components/HardLink';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Users, Award, Target, Globe, ArrowRight } from 'lucide-react';
@@ -9,13 +8,81 @@ import Footer from '@/components/Footer';
 import SEOHead from '@/components/SEOHead';
 
 const AboutPage = () => {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "WebThriver",
+      "url": "https://webthriver.com",
+      "logo": "https://webthriver.com/logo.png",
+      "description": "Bangladesh's leading digital transformation company helping businesses thrive in the digital age",
+      "foundingDate": "2019",
+      "numberOfEmployees": "50+",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "BD",
+        "addressLocality": "Dhaka"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "250",
+        "bestRating": "5"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Digital Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service", 
+              "name": "Web Development",
+              "description": "Custom web development solutions"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "E-commerce Development", 
+              "description": "Online store development and optimization"
+            }
+          }
+        ]
+      }
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://webthriver.com"
+        },
+        {
+          "@type": "ListItem", 
+          "position": 2,
+          "name": "About",
+          "item": "https://webthriver.com/about"
+        }
+      ]
+    }
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
       <SEOHead
         title="About WebThriver - Bangladesh's Leading Digital Transformation Company"
         description="Learn about WebThriver's journey from a small team to Bangladesh's top digital agency. 500+ successful projects, 50+ experts, and 5+ years of excellence."
-        keywords="about webthriver, digital agency bangladesh, web development company, bangladesh tech company"
+        keywords="about webthriver, digital agency bangladesh, web development company, bangladesh tech company, digital transformation"
         canonical="https://webthriver.com/about"
+        ogTitle="About WebThriver - Leading Digital Agency in Bangladesh"
+        ogDescription="Discover how WebThriver became Bangladesh's top digital transformation company with 500+ successful projects and 50+ experts."
+        ogImage="https://webthriver.com/og-about.jpg"
+        structuredData={structuredData}
       />
       <Navigation />
 
@@ -116,12 +183,12 @@ const AboutPage = () => {
             <p className="text-xl text-blue-100 mb-8">
               Let's discuss how we can help transform your business digitally.
             </p>
-            <Button asChild size="lg" className="bg-white text-blue-900 hover:bg-blue-50 px-8 py-4 text-lg font-semibold">
-              <Link to="/contact">
+            <HardLink to="/contact">
+              <Button size="lg" className="bg-white text-blue-900 hover:bg-blue-50 px-8 py-4 text-lg font-semibold">
                 Get In Touch
                 <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-            </Button>
+              </Button>
+            </HardLink>
           </div>
         </div>
       </section>
