@@ -1,5 +1,5 @@
 
-import { Link } from 'react-router-dom';
+import HardLink from '@/components/HardLink';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight, CheckCircle, Star, Users, Award, TrendingUp, Globe, Smartphone, ShoppingCart, Phone, Mail, MapPin, Clock, Target } from 'lucide-react';
@@ -12,29 +12,49 @@ import SEOHead from '@/components/SEOHead';
 import seoData from '@/data/seoData.json';
 
 const Index = () => {
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "WebThriver",
-    "url": "https://webthriver.com",
-    "logo": "https://webthriver.com/logo.png",
-    "description": "Leading digital agency in Bangladesh providing web development, e-commerce, mobile apps, and digital marketing services.",
-    "address": {
-      "@type": "PostalAddress",
-      "addressCountry": "BD",
-      "addressLocality": "Dhaka"
+  const structuredDataList = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "WebThriver",
+      "url": "https://webthriver.com",
+      "logo": "https://webthriver.com/logo.png",
+      "description": "Leading digital agency in Bangladesh providing web development, e-commerce, mobile apps, and digital marketing services.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "BD",
+        "addressLocality": "Dhaka"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+880-1700-000000",
+        "contactType": "customer service",
+        "email": "hello@webthriver.com"
+      },
+      "sameAs": [
+        "https://facebook.com/webthriver",
+        "https://linkedin.com/company/webthriver"
+      ]
     },
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+880-1700-000000",
-      "contactType": "customer service",
-      "email": "hello@webthriver.com"
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "WebThriver",
+      "url": "https://webthriver.com",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://webthriver.com/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
     },
-    "sameAs": [
-      "https://facebook.com/webthriver",
-      "https://linkedin.com/company/webthriver"
-    ]
-  };
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://webthriver.com" }
+      ]
+    }
+  ];
 
   const featuredCountries = seoData.countries.slice(0, 8);
   const featuredServices = seoData.services.slice(0, 6);
@@ -46,7 +66,7 @@ const Index = () => {
         description="Transform your business with WebThriver's expert web development, e-commerce, mobile apps, and digital marketing services. Trusted by 500+ businesses in Bangladesh."
         keywords="web development bangladesh, digital marketing, e-commerce development, mobile app development, ui ux design, software development"
         canonical="https://webthriver.com"
-        structuredData={structuredData}
+        structuredData={structuredDataList}
       />
       <Navigation />
 
@@ -69,15 +89,19 @@ const Index = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Button size="lg" className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 px-8 py-4 text-lg group">
-                <Link to="/contact" className="flex items-center">
-                  Start Your Project
-                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                </Link>
-              </Button>
-              <Button variant="outline" size="lg" className="border-2 border-slate-300 hover:border-blue-400 px-8 py-4 text-lg">
-                View Our Work
-              </Button>
+              <HardLink to="/contact">
+                <Button size="lg" className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 px-8 py-4 text-lg group">
+                  <span className="flex items-center">
+                    Start Your Project
+                    <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                  </span>
+                </Button>
+              </HardLink>
+              <HardLink to="/portfolio">
+                <Button variant="outline" size="lg" className="border-2 border-slate-300 hover:border-blue-400 px-8 py-4 text-lg">
+                  View Our Work
+                </Button>
+              </HardLink>
             </div>
 
             <div className="flex flex-wrap justify-center gap-4">
@@ -122,13 +146,13 @@ const Index = () => {
               {featuredCountries.map((country, index) => (
                 <Card key={index} className="hover:shadow-lg transition-shadow group cursor-pointer">
                   <CardContent className="p-6 text-center">
-                    <Link to={`/services/${country.code}`}>
+                    <HardLink to={`/services/${country.code}`}>
                       <MapPin className="w-8 h-8 text-blue-600 mx-auto mb-3" />
                       <h3 className="font-semibold text-slate-800 group-hover:text-blue-600 transition-colors">
                         {country.name}
                       </h3>
                       <p className="text-sm text-slate-600 mt-2">Digital Services</p>
-                    </Link>
+                    </HardLink>
                   </CardContent>
                 </Card>
               ))}
@@ -138,12 +162,12 @@ const Index = () => {
               <p className="text-slate-600 mb-6">
                 Available in United States, United Kingdom, Canada, Australia, Germany, France, UAE, Saudi Arabia, Bangladesh, Netherlands and more countries.
               </p>
-              <Button asChild variant="outline" size="lg">
-                <Link to="/services">
+              <HardLink to="/services">
+                <Button variant="outline" size="lg">
                   View All Countries
                   <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-              </Button>
+                </Button>
+              </HardLink>
             </div>
           </div>
         </div>
@@ -163,12 +187,12 @@ const Index = () => {
           <ServicesGrid />
           
           <div className="text-center mt-12">
-            <Button asChild size="lg" className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700">
-              <Link to="/services">
+            <HardLink to="/services">
+              <Button size="lg" className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700">
                 View All Services
                 <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-            </Button>
+              </Button>
+            </HardLink>
           </div>
         </div>
       </section>
@@ -264,9 +288,9 @@ const Index = () => {
                   </div>
                   <h3 className="text-2xl font-bold mb-4">Web Development</h3>
                   <p className="text-slate-600 mb-6">Custom websites and web applications using React, Next.js, and modern frameworks.</p>
-                  <Button asChild className="w-full">
-                    <Link to="/web-development">Learn More</Link>
-                  </Button>
+                  <HardLink to="/web-development">
+                    <Button className="w-full">Learn More</Button>
+                  </HardLink>
                 </CardContent>
               </Card>
               
@@ -277,9 +301,9 @@ const Index = () => {
                   </div>
                   <h3 className="text-2xl font-bold mb-4">Mobile Apps</h3>
                   <p className="text-slate-600 mb-6">Native and cross-platform mobile applications for iOS and Android platforms.</p>
-                  <Button asChild className="w-full">
-                    <Link to="/mobile-app-development">Learn More</Link>
-                  </Button>
+                  <HardLink to="/mobile-app-development">
+                    <Button className="w-full">Learn More</Button>
+                  </HardLink>
                 </CardContent>
               </Card>
               
@@ -290,9 +314,9 @@ const Index = () => {
                   </div>
                   <h3 className="text-2xl font-bold mb-4">E-commerce</h3>
                   <p className="text-slate-600 mb-6">Complete online stores with payment integration and inventory management.</p>
-                  <Button asChild className="w-full">
-                    <Link to="/ecommerce-development">Learn More</Link>
-                  </Button>
+                  <HardLink to="/ecommerce-development">
+                    <Button className="w-full">Learn More</Button>
+                  </HardLink>
                 </CardContent>
               </Card>
             </div>
@@ -355,10 +379,10 @@ const Index = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {seoData.industries.map((industry, index) => (
                 <Card key={index} className="hover:shadow-lg transition-shadow group cursor-pointer">
-                  <CardContent className="p-6 text-center">
-                    <h3 className="text-lg font-bold mb-3 text-slate-800 group-hover:text-blue-600 transition-colors">{industry.title}</h3>
-                    <p className="text-slate-600 text-sm leading-relaxed">{industry.description}</p>
-                  </CardContent>
+                    <CardContent className="p-6 text-center">
+                      <h3 className="text-lg font-bold mb-3 text-slate-800 group-hover:text-blue-600 transition-colors">{industry.title}</h3>
+                      <p className="text-slate-600 text-sm leading-relaxed">{industry.description}</p>
+                    </CardContent>
                 </Card>
               ))}
             </div>
@@ -404,15 +428,19 @@ const Index = () => {
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 px-8 py-4 text-lg">
-                <Link to="/contact" className="flex items-center">
-                  Start Your Project
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-              </Button>
-              <Button variant="outline" size="lg" className="border-2 border-slate-300 hover:border-blue-400 px-8 py-4 text-lg">
-                Get Free Consultation
-              </Button>
+              <HardLink to="/contact">
+                <Button size="lg" className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 px-8 py-4 text-lg">
+                  <span className="flex items-center">
+                    Start Your Project
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </span>
+                </Button>
+              </HardLink>
+              <HardLink to="/contact">
+                <Button variant="outline" size="lg" className="border-2 border-slate-300 hover:border-blue-400 px-8 py-4 text-lg">
+                  Get Free Consultation
+                </Button>
+              </HardLink>
             </div>
           </div>
         </div>
@@ -432,15 +460,19 @@ const Index = () => {
               Join hundreds of successful businesses who have transformed their operations with our digital solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-white text-blue-900 hover:bg-blue-50 px-8 py-4 text-lg font-semibold">
-                <Link to="/contact" className="flex items-center">
-                  Get Started Today
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-              </Button>
-              <Button variant="outline" size="lg" className="border-2 border-blue-300 text-white hover:bg-blue-800 px-8 py-4 text-lg">
-                View Pricing
-              </Button>
+              <HardLink to="/contact">
+                <Button size="lg" className="bg-white text-blue-900 hover:bg-blue-50 px-8 py-4 text-lg font-semibold">
+                  <span className="flex items-center">
+                    Get Started Today
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </span>
+                </Button>
+              </HardLink>
+              <HardLink to="/services">
+                <Button variant="outline" size="lg" className="border-2 border-blue-300 text-white hover:bg-blue-800 px-8 py-4 text-lg">
+                  View Pricing
+                </Button>
+              </HardLink>
             </div>
           </div>
         </div>

@@ -8,7 +8,7 @@ interface SEOHeadProps {
   ogTitle?: string;
   ogDescription?: string;
   ogImage?: string;
-  structuredData?: object;
+  structuredData?: object | object[];
 }
 
 const SEOHead = ({
@@ -83,17 +83,20 @@ const SEOHead = ({
       setOGTag('og:image', ogImage);
     }
 
-    // Set structured data
+    // Set structured data (supports single object or array)
+    // Remove previous tags added by SEOHead
+    const prevLd = document.querySelectorAll('script[type="application/ld+json"][data-seohead="true"]');
+    prevLd.forEach((n) => n.parentNode?.removeChild(n));
+
     if (structuredData) {
-      const existingStructuredData = document.querySelector('script[type="application/ld+json"]');
-      if (existingStructuredData) {
-        existingStructuredData.textContent = JSON.stringify(structuredData);
-      } else {
+      const dataArray = Array.isArray(structuredData) ? structuredData : [structuredData];
+      dataArray.forEach((data) => {
         const script = document.createElement('script');
         script.type = 'application/ld+json';
-        script.textContent = JSON.stringify(structuredData);
+        script.setAttribute('data-seohead', 'true');
+        script.textContent = JSON.stringify(data);
         document.head.appendChild(script);
-      }
+      });
     }
   }, [title, description, keywords, canonical, ogTitle, ogDescription, ogImage, structuredData]);
 

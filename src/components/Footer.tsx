@@ -15,24 +15,28 @@ const Footer = () => {
               Leading digital transformation company in Bangladesh. We help businesses grow with custom web development, e-commerce solutions, and digital marketing services.
             </p>
             <div className="flex space-x-4">
-              <Button className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700">
-                Start Your Project
-              </Button>
-              <Button variant="outline" className="border-slate-600 text-slate-300 hover:bg-slate-800">
-                Get Free Quote
-              </Button>
+              <HardLink to="/contact">
+                <Button className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700">
+                  Start Your Project
+                </Button>
+              </HardLink>
+              <HardLink to="/contact">
+                <Button variant="outline" className="border-slate-600 text-slate-300 hover:bg-slate-800">
+                  Get Free Quote
+                </Button>
+              </HardLink>
             </div>
           </div>
           
           <div>
             <h4 className="font-semibold mb-6 text-lg">Services</h4>
             <ul className="space-y-3 text-slate-400">
-              <li><HardLink to="/web-development-bangladesh" className="hover:text-white transition-colors">Web Development</HardLink></li>
-              <li><HardLink to="/ecommerce-development-bangladesh" className="hover:text-white transition-colors">E-commerce Development</HardLink></li>
-              <li><HardLink to="/ui-ux-design-bangladesh" className="hover:text-white transition-colors">UI/UX Design</HardLink></li>
-              <li><HardLink to="/digital-marketing-bangladesh" className="hover:text-white transition-colors">Digital Marketing</HardLink></li>
-              <li><HardLink to="/mobile-app-development-bangladesh" className="hover:text-white transition-colors">Mobile App Development</HardLink></li>
-              <li><HardLink to="/software-development-bangladesh" className="hover:text-white transition-colors">Software Development</HardLink></li>
+              <li><HardLink to="/web-development/bd" className="hover:text-white transition-colors">Web Development</HardLink></li>
+              <li><HardLink to="/ecommerce-development/bd" className="hover:text-white transition-colors">E-commerce Development</HardLink></li>
+              <li><HardLink to="/ui-ux-design/bd" className="hover:text-white transition-colors">UI/UX Design</HardLink></li>
+              <li><HardLink to="/digital-marketing/bd" className="hover:text-white transition-colors">Digital Marketing</HardLink></li>
+              <li><HardLink to="/mobile-app-development/bd" className="hover:text-white transition-colors">Mobile App Development</HardLink></li>
+              <li><HardLink to="/software-development/bd" className="hover:text-white transition-colors">Software Development</HardLink></li>
             </ul>
           </div>
           
@@ -61,8 +65,8 @@ const Footer = () => {
         <div className="border-t border-slate-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-slate-400">© 2024 WebThriver. All rights reserved.</p>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <HardLink to="#" className="text-slate-400 hover:text-white transition-colors">Privacy Policy</HardLink>
-            <HardLink to="#" className="text-slate-400 hover:text-white transition-colors">Terms of Service</HardLink>
+            <HardLink to="/privacy-policy" className="text-slate-400 hover:text-white transition-colors">Privacy Policy</HardLink>
+            <HardLink to="/terms" className="text-slate-400 hover:text-white transition-colors">Terms of Service</HardLink>
           </div>
         </div>
       </div>

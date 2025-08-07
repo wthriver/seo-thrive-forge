@@ -5,14 +5,10 @@ interface HardLinkProps {
 }
 
 const HardLink = ({ to, children, className }: HardLinkProps) => {
-  const handleClick = () => {
-    window.location.href = to;
-  };
-
   return (
-    <button onClick={handleClick} className={className}>
+    <a href={to} className={className}>
       {children}
-    </button>
+    </a>
   );
 };
 

@@ -27,9 +27,11 @@ const Navigation = () => {
           </div>
 
           <div className="hidden lg:flex items-center space-x-4">
-            <Button className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700">
-              Get Quote
-            </Button>
+            <HardLink to="/contact">
+              <Button className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700">
+                Get Quote
+              </Button>
+            </HardLink>
           </div>
 
           {/* Mobile Menu Button */}
@@ -52,9 +54,11 @@ const Navigation = () => {
               <HardLink to="/blog" className="text-slate-600 hover:text-blue-600 transition-colors">Blog</HardLink>
               <HardLink to="/faq" className="text-slate-600 hover:text-blue-600 transition-colors">FAQ</HardLink>
               <HardLink to="/contact" className="text-slate-600 hover:text-blue-600 transition-colors">Contact</HardLink>
-              <Button className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 w-full">
-                Get Quote
-              </Button>
+              <HardLink to="/contact">
+                <Button className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 w-full">
+                  Get Quote
+                </Button>
+              </HardLink>
             </div>
           </div>
         )}
