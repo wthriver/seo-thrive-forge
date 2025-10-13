@@ -94,18 +94,6 @@
         "Security Implementation"
       ],
       "technologies": ["React", "Next.js", "Vue.js", "Node.js", "TypeScript", "Tailwind CSS"],
-      "pricing": {
-        "us": "$2,500",
-        "uk": "£2,000",
-        "ca": "CAD $3,200",
-        "au": "AUD $3,800",
-        "de": "€2,200",
-        "fr": "€2,200",
-        "ae": "AED 9,000",
-        "sa": "SAR 9,500",
-        "bd": "৳25,000",
-        "nl": "€2,200"
-      },
       "delivery_time": "2-6 weeks",
       "process": [
         "Requirements Analysis & Planning",
@@ -137,18 +125,6 @@
         "Analytics & Tracking"
       ],
       "technologies": ["React Native", "Flutter", "Swift", "Kotlin", "Firebase", "API Integration"],
-      "pricing": {
-        "us": "$8,000",
-        "uk": "£6,500",
-        "ca": "CAD $10,500",
-        "au": "AUD $12,000",
-        "de": "€7,200",
-        "fr": "€7,200",
-        "ae": "AED 29,000",
-        "sa": "SAR 30,000",
-        "bd": "৳75,000",
-        "nl": "€7,200"
-      },
       "delivery_time": "4-12 weeks",
       "process": [
         "App Strategy & Planning",
@@ -180,18 +156,6 @@
         "Analytics & Reporting"
       ],
       "technologies": ["Shopify", "WooCommerce", "Magento", "React", "Payment APIs", "Database Management"],
-      "pricing": {
-        "us": "$5,000",
-        "uk": "£4,000",
-        "ca": "CAD $6,500",
-        "au": "AUD $7,500",
-        "de": "€4,500",
-        "fr": "€4,500",
-        "ae": "AED 18,000",
-        "sa": "SAR 19,000",
-        "bd": "৳50,000",
-        "nl": "€4,500"
-      },
       "delivery_time": "3-8 weeks",
       "process": [
         "E-commerce Strategy Planning",
@@ -223,18 +187,6 @@
         "Brand Strategy Development"
       ],
       "technologies": ["Google Analytics", "Google Ads", "Facebook Ads Manager", "SEO Tools", "Email Platforms"],
-      "pricing": {
-        "us": "$1,500/month",
-        "uk": "£1,200/month",
-        "ca": "CAD $2,000/month",
-        "au": "AUD $2,200/month",
-        "de": "€1,400/month",
-        "fr": "€1,400/month",
-        "ae": "AED 5,500/month",
-        "sa": "SAR 5,700/month",
-        "bd": "৳20,000/month",
-        "nl": "€1,400/month"
-      },
       "delivery_time": "Ongoing",
       "process": [
         "Marketing Audit & Strategy",
@@ -266,18 +218,6 @@
         "Interactive Prototypes"
       ],
       "technologies": ["Figma", "Adobe XD", "Sketch", "InVision", "Principle", "Framer"],
-      "pricing": {
-        "us": "$3,000",
-        "uk": "£2,400",
-        "ca": "CAD $3,900",
-        "au": "AUD $4,500",
-        "de": "€2,700",
-        "fr": "€2,700",
-        "ae": "AED 11,000",
-        "sa": "SAR 11,500",
-        "bd": "৳35,000",
-        "nl": "€2,700"
-      },
       "delivery_time": "2-6 weeks",
       "process": [
         "User Research & Analysis",
@@ -309,18 +249,6 @@
         "Maintenance & Support"
       ],
       "technologies": ["Java", "Python", "C#", ".NET", "Node.js", "Cloud Platforms", "Databases"],
-      "pricing": {
-        "us": "$15,000",
-        "uk": "£12,000",
-        "ca": "CAD $19,500",
-        "au": "AUD $22,500",
-        "de": "€13,500",
-        "fr": "€13,500",
-        "ae": "AED 55,000",
-        "sa": "SAR 56,000",
-        "bd": "৳150,000",
-        "nl": "€13,500"
-      },
       "delivery_time": "8-24 weeks",
       "process": [
         "Requirements Gathering",

@@ -26,12 +26,7 @@ const ServicePage = ({ service }: ServicePageProps) => {
       "name": "WebThriver",
       "url": "https://webthriver.com"
     },
-    "serviceType": serviceData.name,
-    "offers": {
-      "@type": "Offer",
-      "price": serviceData.pricing.bd,
-      "priceCurrency": "BDT"
-    }
+    "serviceType": serviceData.name
   } : null;
 
   if (!serviceData) {
@@ -235,10 +230,7 @@ const ServicePage = ({ service }: ServicePageProps) => {
                       <p className="text-slate-600 mb-4">
                         Professional {serviceData.name.toLowerCase()} services tailored for the {country.name} market.
                       </p>
-                      <div className="flex justify-between items-center">
-                        <span className="text-green-600 font-semibold">
-                          Starting from {serviceData.pricing[country.code as keyof typeof serviceData.pricing] || serviceData.pricing.bd}
-                        </span>
+                      <div className="flex justify-end items-center">
                         <ArrowRight className="w-5 h-5 text-blue-600 group-hover:translate-x-1 transition-transform" />
                       </div>
                     </HardLink>

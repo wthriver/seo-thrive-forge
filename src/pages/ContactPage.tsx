@@ -19,8 +19,7 @@ const ContactPage = () => {
       "name": "WebThriver",
       "image": "https://webthriver.com/logo.png",
       "url": "https://webthriver.com",
-      "telephone": "+880 1700 000000",
-      "email": "hello@webthriver.com",
+      "email": "wthriver@gmail.com",
       "address": {
         "@type": "PostalAddress",
         "addressCountry": "BD",
@@ -101,7 +100,7 @@ const ContactPage = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
       <SEOHead
         title="Contact WebThriver - Get Your Free Digital Consultation Today"
-        description="Contact WebThriver for professional web development, digital marketing, and e-commerce solutions in Bangladesh. Free consultation available. Call +880 1700 000000."
+        description="Contact WebThriver for professional web development, digital marketing, and e-commerce solutions in Bangladesh. Free consultation available."
         keywords="contact webthriver, digital agency contact, web development bangladesh, free consultation, digital marketing services"
         canonical="https://webthriver.com/contact"
         ogTitle="Contact WebThriver - Free Digital Consultation"
@@ -261,26 +260,11 @@ const ContactPage = () => {
                     <CardContent className="p-6">
                       <div className="flex items-center">
                         <div className="p-3 bg-blue-100 rounded-lg mr-4">
-                          <Phone className="w-6 h-6 text-blue-600" />
-                        </div>
-                        <div>
-                          <h3 className="font-semibold text-slate-800">Phone</h3>
-                          <p className="text-slate-600">+880 1700 000000</p>
-                          <p className="text-sm text-slate-500">Call us 9 AM - 6 PM (GMT+6)</p>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-
-                  <Card className="hover:shadow-lg transition-shadow">
-                    <CardContent className="p-6">
-                      <div className="flex items-center">
-                        <div className="p-3 bg-blue-100 rounded-lg mr-4">
                           <Mail className="w-6 h-6 text-blue-600" />
                         </div>
                         <div>
                           <h3 className="font-semibold text-slate-800">Email</h3>
-                          <p className="text-slate-600">hello@webthriver.com</p>
+                          <p className="text-slate-600">wthriver@gmail.com</p>
                           <p className="text-sm text-slate-500">We'll respond within 2 hours</p>
                         </div>
                       </div>

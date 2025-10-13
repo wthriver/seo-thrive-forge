@@ -20,8 +20,8 @@ const Navigation = () => {
             <HardLink to="/" className="text-slate-600 hover:text-blue-600 transition-colors">Home</HardLink>
             <HardLink to="/services" className="text-slate-600 hover:text-blue-600 transition-colors">Services</HardLink>
             <HardLink to="/about" className="text-slate-600 hover:text-blue-600 transition-colors">About</HardLink>
-            <HardLink to="/portfolio" className="text-slate-600 hover:text-blue-600 transition-colors">Portfolio</HardLink>
-            <HardLink to="/blog" className="text-slate-600 hover:text-blue-600 transition-colors">Blog</HardLink>
+            {/* <HardLink to="/portfolio" className="text-slate-600 hover:text-blue-600 transition-colors">Portfolio</HardLink> */}
+            {/* <HardLink to="/blog" className="text-slate-600 hover:text-blue-600 transition-colors">Blog</HardLink> */}
             <HardLink to="/faq" className="text-slate-600 hover:text-blue-600 transition-colors">FAQ</HardLink>
             <HardLink to="/contact" className="text-slate-600 hover:text-blue-600 transition-colors">Contact</HardLink>
           </div>
@@ -50,8 +50,8 @@ const Navigation = () => {
               <HardLink to="/" className="text-slate-600 hover:text-blue-600 transition-colors">Home</HardLink>
               <HardLink to="/services" className="text-slate-600 hover:text-blue-600 transition-colors">Services</HardLink>
               <HardLink to="/about" className="text-slate-600 hover:text-blue-600 transition-colors">About</HardLink>
-              <HardLink to="/portfolio" className="text-slate-600 hover:text-blue-600 transition-colors">Portfolio</HardLink>
-              <HardLink to="/blog" className="text-slate-600 hover:text-blue-600 transition-colors">Blog</HardLink>
+              {/* <HardLink to="/portfolio" className="text-slate-600 hover:text-blue-600 transition-colors">Portfolio</HardLink> */}
+              {/* <HardLink to="/blog" className="text-slate-600 hover:text-blue-600 transition-colors">Blog</HardLink> */}
               <HardLink to="/faq" className="text-slate-600 hover:text-blue-600 transition-colors">FAQ</HardLink>
               <HardLink to="/contact" className="text-slate-600 hover:text-blue-600 transition-colors">Contact</HardLink>
               <HardLink to="/contact">

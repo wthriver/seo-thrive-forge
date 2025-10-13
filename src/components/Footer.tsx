@@ -44,9 +44,9 @@ const Footer = () => {
             <h4 className="font-semibold mb-6 text-lg">Company</h4>
             <ul className="space-y-3 text-slate-400">
               <li><HardLink to="/about" className="hover:text-white transition-colors">About Us</HardLink></li>
-              <li><HardLink to="/portfolio" className="hover:text-white transition-colors">Portfolio</HardLink></li>
+              {/* <li><HardLink to="/portfolio" className="hover:text-white transition-colors">Portfolio</HardLink></li> */}
               <li><HardLink to="/services" className="hover:text-white transition-colors">All Services</HardLink></li>
-              <li><HardLink to="/blog" className="hover:text-white transition-colors">Blog</HardLink></li>
+              {/* <li><HardLink to="/blog" className="hover:text-white transition-colors">Blog</HardLink></li> */}
               <li><HardLink to="/faq" className="hover:text-white transition-colors">FAQ</HardLink></li>
               <li><HardLink to="/contact" className="hover:text-white transition-colors">Contact</HardLink></li>
             </ul>
@@ -54,8 +54,7 @@ const Footer = () => {
             <div className="mt-8">
               <h4 className="font-semibold mb-4 text-lg">Contact Info</h4>
               <div className="text-slate-400 space-y-2">
-                <p>📧 hello@webthriver.com</p>
-                <p>📞 +880 1700 000000</p>
+                <p>📧 wthriver@gmail.com</p>
                 <p>📍 Dhaka, Bangladesh</p>
               </div>
             </div>

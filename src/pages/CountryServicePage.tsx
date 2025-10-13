@@ -33,12 +33,7 @@ const CountryServicePage = ({ service }: CountryServicePageProps) => {
         "name": countryData.name
       }
     },
-    "serviceType": serviceData.name,
-    "offers": {
-      "@type": "Offer",
-      "price": serviceData.pricing[country as keyof typeof serviceData.pricing] || serviceData.pricing.bd,
-      "priceCurrency": countryData.currency
-    }
+    "serviceType": serviceData.name
   } : null;
 
   if (!serviceData || !countryData) {
@@ -67,7 +62,7 @@ const CountryServicePage = ({ service }: CountryServicePageProps) => {
     },
     {
       question: `What is the cost of ${serviceData.name.toLowerCase()} services in ${countryData.name}?`,
-      answer: `Our ${serviceData.name.toLowerCase()} services in ${countryData.name} start from ${serviceData.pricing[country as keyof typeof serviceData.pricing] || serviceData.pricing.bd}. The final cost depends on project complexity, features required, and timeline. We provide detailed quotes after understanding your specific requirements.`
+      answer: `The cost of our ${serviceData.name.toLowerCase()} services in ${countryData.name} depends on project complexity, features required, and timeline. We provide detailed quotes after understanding your specific requirements. Contact us for a free consultation.`
     },
     {
       question: `How long does a ${serviceData.name.toLowerCase()} project take in ${countryData.name}?`,
@@ -92,7 +87,7 @@ const CountryServicePage = ({ service }: CountryServicePageProps) => {
           keywords={`${serviceData.name}, ${countryData.name}, ${serviceData.technologies.join(', ')}, professional digital services`}
           canonical={`https://webthriver.com/${service}/${country}`}
           ogTitle={`${serviceData.title} in ${countryData.name} | WebThriver`}
-          ogDescription={`Professional ${serviceData.name.toLowerCase()} services in ${countryData.name}. Starting from ${serviceData.pricing[country as keyof typeof serviceData.pricing] || serviceData.pricing.bd}.`}
+          ogDescription={`Professional ${serviceData.name.toLowerCase()} services in ${countryData.name}. Contact us for a free consultation.`}
           structuredData={structuredData}
         />
       )}
@@ -125,7 +120,7 @@ const CountryServicePage = ({ service }: CountryServicePageProps) => {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Button size="lg" className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 px-8 py-4 text-lg group">
-                Get Started - {serviceData.pricing[country as keyof typeof serviceData.pricing] || serviceData.pricing.bd}
+                Get Started
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Button>
               <Button variant="outline" size="lg" className="border-2 border-slate-300 hover:border-blue-400 px-8 py-4 text-lg">
@@ -171,7 +166,7 @@ const CountryServicePage = ({ service }: CountryServicePageProps) => {
                 },
                 { 
                   title: 'Competitive Pricing', 
-                  description: `Transparent pricing starting from ${serviceData.pricing[country as keyof typeof serviceData.pricing] || serviceData.pricing.bd} with no hidden costs. Flexible payment options tailored for ${countryData.name} businesses.` 
+                  description: `Transparent pricing with no hidden costs. Flexible payment options tailored for ${countryData.name} businesses. Contact us for a detailed quote.` 
                 },
                 { 
                   title: 'Latest Technology', 
@@ -344,7 +339,7 @@ const CountryServicePage = ({ service }: CountryServicePageProps) => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <HardLink to="/contact">
                 <Button size="lg" className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 px-8 py-4 text-lg">
-                  Start Your Project - {serviceData.pricing[country as keyof typeof serviceData.pricing] || serviceData.pricing.bd}
+                  Start Your Project
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </HardLink>

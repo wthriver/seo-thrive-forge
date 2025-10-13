@@ -148,10 +148,6 @@ const CountryServicesPage = () => {
                       </p>
                       
                       <div className="mb-6">
-                        <div className="flex justify-between items-center mb-3">
-                          <span className="text-sm text-slate-500">Starting at:</span>
-                          <span className="font-bold text-green-600 text-lg">{service.pricing[country]}</span>
-                        </div>
                         <div className="flex justify-between items-center">
                           <span className="text-sm text-slate-500">Delivery:</span>
                           <span className="font-semibold text-blue-600">{service.delivery_time}</span>
