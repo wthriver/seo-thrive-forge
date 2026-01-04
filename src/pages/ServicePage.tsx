@@ -76,12 +76,12 @@ const ServicePage = ({ service }: ServicePageProps) => {
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
       {serviceData && (
         <SEOHead
-          title={`${serviceData.title} | WebThriver`}
-          description={serviceData.description}
-          keywords={`${serviceData.name}, ${serviceData.technologies.join(', ')}, professional digital services, Bangladesh`}
+          title={`${serviceData.title} | Custom Web Development Company 2026`}
+          description={`${serviceData.description} Leading custom web development company delivering bespoke ${serviceData.name.toLowerCase()} solutions with cutting-edge technology.`}
+          keywords={`${serviceData.name}, ${serviceData.technologies.join(', ')}, professional digital services, custom web development company, bespoke web solutions`}
           canonical={`https://webthriver.com/${service}`}
-          ogTitle={`${serviceData.title} | WebThriver`}
-          ogDescription={serviceData.description}
+          ogTitle={`${serviceData.title} | WebThriver Custom Web Development`}
+          ogDescription={`${serviceData.description} Expert ${serviceData.name.toLowerCase()} services from a leading custom web development company.`}
           structuredData={structuredData}
         />
       )}
@@ -99,7 +99,7 @@ const ServicePage = ({ service }: ServicePageProps) => {
             
             <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
               <span className="bg-gradient-to-r from-slate-900 via-blue-900 to-indigo-900 bg-clip-text text-transparent">
-                {serviceData.title}
+                {serviceData.title} 2026
               </span>
             </h1>
             

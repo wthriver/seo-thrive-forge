@@ -62,9 +62,9 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
       <SEOHead
-        title="WebThriver - Leading Digital Agency in Bangladesh | Web Development & Digital Marketing"
-        description="Transform your business with WebThriver's expert web development, e-commerce, mobile apps, and digital marketing services. Trusted by 500+ businesses in Bangladesh."
-        keywords="web development bangladesh, digital marketing, e-commerce development, mobile app development, ui ux design, software development"
+        title="WebThriver - Custom Web Development Company | Bespoke Solutions 2026"
+        description="WebThriver is a leading custom web development company specializing in bespoke websites, e-commerce, mobile apps, and digital marketing. Trusted by 500+ businesses worldwide since 2020."
+        keywords="custom web development company, bespoke web development, custom web development services, web development agency, custom websites, e-commerce development, mobile app development, software development, digital marketing"
         canonical="https://webthriver.com"
         structuredData={structuredDataList}
       />
@@ -77,15 +77,15 @@ const Index = () => {
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
               <span className="bg-gradient-to-r from-slate-900 via-blue-900 to-indigo-900 bg-clip-text text-transparent">
-                Transform Your Business
+                Custom Web Development Company
               </span>
               <br />
               <span className="text-3xl md:text-4xl text-blue-600">
-                Digitally with WebThriver
+                Building Bespoke Digital Solutions
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-slate-600 mb-8 leading-relaxed">
-              Leading digital agency providing world-class web development, e-commerce solutions, mobile apps, and digital marketing services to businesses worldwide.
+              Premier custom web development company crafting bespoke websites, e-commerce platforms, and mobile applications. Transform your business with our expert team since 2020.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -97,9 +97,9 @@ const Index = () => {
                   </span>
                 </Button>
               </HardLink>
-              <HardLink to="/portfolio">
+              <HardLink to="/services">
                 <Button variant="outline" size="lg" className="border-2 border-slate-300 hover:border-blue-400 px-8 py-4 text-lg">
-                  View Our Work
+                  View Our Services
                 </Button>
               </HardLink>
             </div>
@@ -135,10 +135,10 @@ const Index = () => {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent">
-                Serving Clients Worldwide
+                Serving Clients Worldwide with Custom Solutions
               </h2>
               <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-                We provide professional digital services to businesses across the globe, with local expertise and international standards.
+                As a global custom web development company, we provide bespoke digital services to businesses across the globe, with local expertise and international standards.
               </p>
             </div>
             
@@ -178,10 +178,10 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent">
-              Our Digital Services
+              Our Custom Web Development Services
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-              From custom web development to complete digital transformation, we provide comprehensive solutions that help businesses thrive in the digital age.
+              From custom web development to complete digital transformation, our custom web development company provides comprehensive solutions that help businesses thrive in the digital age.
             </p>
           </div>
           <ServicesGrid />

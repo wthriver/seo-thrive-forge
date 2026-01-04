@@ -82,12 +82,12 @@ const CountryServicePage = ({ service }: CountryServicePageProps) => {
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
       {serviceData && countryData && (
         <SEOHead
-          title={`${serviceData.title} in ${countryData.name} | WebThriver`}
-          description={`Professional ${serviceData.name.toLowerCase()} services in ${countryData.name}. ${serviceData.description}. Contact us for a free consultation.`}
-          keywords={`${serviceData.name}, ${countryData.name}, ${serviceData.technologies.join(', ')}, professional digital services`}
+          title={`${serviceData.title} in ${countryData.name} | Custom Web Development Company 2026`}
+          description={`Professional ${serviceData.name.toLowerCase()} services in ${countryData.name}. ${serviceData.description} Custom web development company serving ${countryData.name} with bespoke solutions.`}
+          keywords={`${serviceData.name}, ${countryData.name}, ${serviceData.technologies.join(', ')}, professional digital services, custom web development company ${countryData.name}`}
           canonical={`https://webthriver.com/${service}/${country}`}
-          ogTitle={`${serviceData.title} in ${countryData.name} | WebThriver`}
-          ogDescription={`Professional ${serviceData.name.toLowerCase()} services in ${countryData.name}. Contact us for a free consultation.`}
+          ogTitle={`${serviceData.title} in ${countryData.name} | WebThriver Custom Web Development`}
+          ogDescription={`Professional ${serviceData.name.toLowerCase()} services in ${countryData.name}. Custom web development company providing bespoke solutions. Contact us for a free consultation.`}
           structuredData={structuredData}
         />
       )}

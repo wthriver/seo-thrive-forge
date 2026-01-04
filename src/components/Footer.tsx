@@ -4,7 +4,7 @@ import HardLink from './HardLink';
 
 const Footer = () => {
   return (
-    <footer className="bg-slate-900 text-white py-16">
+    <footer className="bg-slate-900 text-white py-16 mt-auto">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-2">
@@ -12,7 +12,7 @@ const Footer = () => {
               WebThriver
             </HardLink>
             <p className="text-slate-400 mb-6 text-lg">
-              Leading digital transformation company in Bangladesh. We help businesses grow with custom web development, e-commerce solutions, and digital marketing services.
+              Custom web development company helping businesses grow with bespoke web development, e-commerce solutions, and digital marketing services worldwide.
             </p>
             <div className="flex space-x-4">
               <HardLink to="/contact">
@@ -27,19 +27,19 @@ const Footer = () => {
               </HardLink>
             </div>
           </div>
-          
+
           <div>
             <h4 className="font-semibold mb-6 text-lg">Services</h4>
             <ul className="space-y-3 text-slate-400">
-              <li><HardLink to="/web-development/bd" className="hover:text-white transition-colors">Web Development</HardLink></li>
-              <li><HardLink to="/ecommerce-development/bd" className="hover:text-white transition-colors">E-commerce Development</HardLink></li>
-              <li><HardLink to="/ui-ux-design/bd" className="hover:text-white transition-colors">UI/UX Design</HardLink></li>
-              <li><HardLink to="/digital-marketing/bd" className="hover:text-white transition-colors">Digital Marketing</HardLink></li>
-              <li><HardLink to="/mobile-app-development/bd" className="hover:text-white transition-colors">Mobile App Development</HardLink></li>
-              <li><HardLink to="/software-development/bd" className="hover:text-white transition-colors">Software Development</HardLink></li>
+              <li><HardLink to="/web-development" className="hover:text-white transition-colors">Web Development</HardLink></li>
+              <li><HardLink to="/ecommerce-development" className="hover:text-white transition-colors">E-commerce Development</HardLink></li>
+              <li><HardLink to="/ui-ux-design" className="hover:text-white transition-colors">UI/UX Design</HardLink></li>
+              <li><HardLink to="/digital-marketing" className="hover:text-white transition-colors">Digital Marketing</HardLink></li>
+              <li><HardLink to="/mobile-app-development" className="hover:text-white transition-colors">Mobile App Development</HardLink></li>
+              <li><HardLink to="/software-development" className="hover:text-white transition-colors">Software Development</HardLink></li>
             </ul>
           </div>
-          
+
           <div>
             <h4 className="font-semibold mb-6 text-lg">Company</h4>
             <ul className="space-y-3 text-slate-400">
@@ -47,22 +47,22 @@ const Footer = () => {
               {/* <li><HardLink to="/portfolio" className="hover:text-white transition-colors">Portfolio</HardLink></li> */}
               <li><HardLink to="/services" className="hover:text-white transition-colors">All Services</HardLink></li>
               {/* <li><HardLink to="/blog" className="hover:text-white transition-colors">Blog</HardLink></li> */}
-              <li><HardLink to="/faq" className="hover:text-white transition-colors">FAQ</HardLink></li>
+              {/* <li><HardLink to="/faq" className="hover:text-white transition-colors">FAQ</HardLink></li> */}
               <li><HardLink to="/contact" className="hover:text-white transition-colors">Contact</HardLink></li>
             </ul>
-            
+
             <div className="mt-8">
               <h4 className="font-semibold mb-4 text-lg">Contact Info</h4>
               <div className="text-slate-400 space-y-2">
-                <p>📧 wthriver@gmail.com</p>
-                <p>📍 Dhaka, Bangladesh</p>
+                <p>📧 info@webthriver.com</p>
+                <p>📍 Global Remote Team</p>
               </div>
             </div>
           </div>
         </div>
-        
+
         <div className="border-t border-slate-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-slate-400">© 2024 WebThriver. All rights reserved.</p>
+          <p className="text-slate-400">© 2026 WebThriver. All rights reserved.</p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <HardLink to="/privacy-policy" className="text-slate-400 hover:text-white transition-colors">Privacy Policy</HardLink>
             <HardLink to="/terms" className="text-slate-400 hover:text-white transition-colors">Terms of Service</HardLink>

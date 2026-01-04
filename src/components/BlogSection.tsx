@@ -1,30 +1,29 @@
-import { Link } from 'react-router-dom';
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight, Calendar, User } from 'lucide-react';
 
 const BlogSection = () => {
   const blogPosts = [
     {
-      title: "10 Essential Features Every E-commerce Website Needs in 2024",
-      excerpt: "Discover the must-have features that can boost your online store's conversion rates and customer satisfaction.",
+      title: "10 Essential Features Every E-commerce Website Needs in 2026",
+      excerpt: "Discover must-have features that can boost your online store's conversion rates and customer satisfaction in the evolving digital landscape.",
       author: "WebThriver Team",
-      date: "January 15, 2024",
+      date: "January 15, 2026",
       category: "E-commerce",
       readTime: "5 min read"
     },
     {
-      title: "The Complete Guide to SEO for Bangladesh Businesses",
-      excerpt: "Learn how to dominate local search results and attract more customers with our comprehensive SEO strategy guide.",
-      author: "WebThriver Team", 
-      date: "January 10, 2024",
+      title: "The Complete Guide to SEO for Businesses in 2026",
+      excerpt: "Learn how to dominate local search results and attract more customers with our comprehensive SEO strategy guide for modern businesses.",
+      author: "WebThriver Team",
+      date: "January 10, 2026",
       category: "Digital Marketing",
       readTime: "8 min read"
     },
     {
-      title: "Mobile-First Design: Why It Matters for Your Business",
-      excerpt: "Understand why mobile-first approach is crucial for your website's success in today's smartphone-dominated world.",
+      title: "Mobile-First Design: Why It Matters for Your Business in 2026",
+      excerpt: "Understand why mobile-first approach is crucial for your website's success in today's smartphone-dominated world and future trends.",
       author: "WebThriver Team",
-      date: "January 5, 2024", 
+      date: "January 5, 2026",
       category: "Web Development",
       readTime: "6 min read"
     }
@@ -39,10 +38,10 @@ const BlogSection = () => {
               Latest Insights & Tips
             </h2>
             <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-              Stay updated with the latest trends in web development, digital marketing, and business growth strategies.
+              Stay updated with latest trends in web development, digital marketing, and business growth strategies.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {blogPosts.map((post, index) => (
               <Card key={index} className="hover:shadow-lg transition-shadow group">
@@ -52,15 +51,15 @@ const BlogSection = () => {
                       {post.category}
                     </span>
                   </div>
-                  
+
                   <h3 className="text-xl font-bold mb-3 text-slate-800 group-hover:text-blue-600 transition-colors">
                     {post.title}
                   </h3>
-                  
+
                   <p className="text-slate-600 mb-4 leading-relaxed">
                     {post.excerpt}
                   </p>
-                  
+
                   <div className="flex items-center justify-between text-sm text-slate-500 mb-4">
                     <div className="flex items-center">
                       <User className="w-4 h-4 mr-1" />
@@ -71,16 +70,16 @@ const BlogSection = () => {
                       {post.date}
                     </div>
                   </div>
-                  
+
                   <div className="flex items-center justify-between">
                     <span className="text-sm text-slate-500">{post.readTime}</span>
-                    <Link 
-                      to="/blog" 
-                      className="text-blue-600 hover:text-blue-700 font-medium group-hover:translate-x-1 transition-transform inline-flex items-center"
+                    <button
+                      className="text-blue-600 hover:text-blue-700 font-medium group-hover:translate-x-1 transition-transform inline-flex items-center cursor-pointer"
+                      disabled
                     >
                       Read More
                       <ArrowRight className="ml-1 h-4 w-4" />
-                    </Link>
+                    </button>
                   </div>
                 </CardContent>
               </Card>

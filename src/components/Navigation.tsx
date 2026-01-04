@@ -22,7 +22,7 @@ const Navigation = () => {
             <HardLink to="/about" className="text-slate-600 hover:text-blue-600 transition-colors">About</HardLink>
             {/* <HardLink to="/portfolio" className="text-slate-600 hover:text-blue-600 transition-colors">Portfolio</HardLink> */}
             {/* <HardLink to="/blog" className="text-slate-600 hover:text-blue-600 transition-colors">Blog</HardLink> */}
-            <HardLink to="/faq" className="text-slate-600 hover:text-blue-600 transition-colors">FAQ</HardLink>
+            {/* <HardLink to="/faq" className="text-slate-600 hover:text-blue-600 transition-colors">FAQ</HardLink> */}
             <HardLink to="/contact" className="text-slate-600 hover:text-blue-600 transition-colors">Contact</HardLink>
           </div>
 
@@ -52,7 +52,7 @@ const Navigation = () => {
               <HardLink to="/about" className="text-slate-600 hover:text-blue-600 transition-colors">About</HardLink>
               {/* <HardLink to="/portfolio" className="text-slate-600 hover:text-blue-600 transition-colors">Portfolio</HardLink> */}
               {/* <HardLink to="/blog" className="text-slate-600 hover:text-blue-600 transition-colors">Blog</HardLink> */}
-              <HardLink to="/faq" className="text-slate-600 hover:text-blue-600 transition-colors">FAQ</HardLink>
+              {/* <HardLink to="/faq" className="text-slate-600 hover:text-blue-600 transition-colors">FAQ</HardLink> */}
               <HardLink to="/contact" className="text-slate-600 hover:text-blue-600 transition-colors">Contact</HardLink>
               <HardLink to="/contact">
                 <Button className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 w-full">

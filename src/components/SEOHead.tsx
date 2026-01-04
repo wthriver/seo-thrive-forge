@@ -8,7 +8,18 @@ interface SEOHeadProps {
   ogTitle?: string;
   ogDescription?: string;
   ogImage?: string;
+  ogType?: string;
+  twitterTitle?: string;
+  twitterDescription?: string;
+  twitterImage?: string;
   structuredData?: object | object[];
+  noIndex?: boolean;
+  noFollow?: boolean;
+  articlePublishedTime?: string;
+  articleModifiedTime?: string;
+  articleAuthor?: string;
+  articleSection?: string;
+  articleTag?: string[];
 }
 
 const SEOHead = ({
@@ -19,7 +30,18 @@ const SEOHead = ({
   ogTitle,
   ogDescription,
   ogImage,
-  structuredData
+  ogType = 'website',
+  twitterTitle,
+  twitterDescription,
+  twitterImage,
+  structuredData,
+  noIndex = false,
+  noFollow = false,
+  articlePublishedTime,
+  articleModifiedTime,
+  articleAuthor,
+  articleSection,
+  articleTag
 }: SEOHeadProps) => {
   useEffect(() => {
     // Set title
@@ -47,6 +69,18 @@ const SEOHead = ({
         meta.content = keywords;
         document.head.appendChild(meta);
       }
+    }
+
+    // Set robots meta
+    const robotsContent = `${noIndex ? 'noindex' : 'index'},${noFollow ? 'nofollow' : 'follow'}`;
+    const metaRobots = document.querySelector('meta[name="robots"]');
+    if (metaRobots) {
+      metaRobots.setAttribute('content', robotsContent);
+    } else {
+      const meta = document.createElement('meta');
+      meta.name = 'robots';
+      meta.content = robotsContent;
+      document.head.appendChild(meta);
     }
 
     // Set canonical URL
@@ -77,10 +111,54 @@ const SEOHead = ({
 
     setOGTag('og:title', ogTitle || title);
     setOGTag('og:description', ogDescription || description);
-    setOGTag('og:type', 'website');
-    
+    setOGTag('og:type', ogType);
+    setOGTag('og:url', canonical || window.location.href);
+
     if (ogImage) {
       setOGTag('og:image', ogImage);
+      setOGTag('og:image:secure_url', ogImage);
+      setOGTag('og:image:alt', title);
+    }
+
+    // Article-specific OG tags
+    if (ogType === 'article') {
+      if (articlePublishedTime) {
+        setOGTag('article:published_time', articlePublishedTime);
+      }
+      if (articleModifiedTime) {
+        setOGTag('article:modified_time', articleModifiedTime);
+      }
+      if (articleAuthor) {
+        setOGTag('article:author', articleAuthor);
+      }
+      if (articleSection) {
+        setOGTag('article:section', articleSection);
+      }
+      if (articleTag && articleTag.length > 0) {
+        articleTag.forEach((tag) => {
+          setOGTag('article:tag', tag);
+        });
+      }
+    }
+
+    // Set Twitter Card tags
+    const setTwitterTag = (name: string, content: string) => {
+      const existing = document.querySelector(`meta[name="${name}"]`);
+      if (existing) {
+        existing.setAttribute('content', content);
+      } else {
+        const meta = document.createElement('meta');
+        meta.setAttribute('name', name);
+        meta.content = content;
+        document.head.appendChild(meta);
+      }
+    };
+
+    setTwitterTag('twitter:card', ogImage ? 'summary_large_image' : 'summary');
+    setTwitterTag('twitter:title', twitterTitle || ogTitle || title);
+    setTwitterTag('twitter:description', twitterDescription || ogDescription || description);
+    if (twitterImage || ogImage) {
+      setTwitterTag('twitter:image', twitterImage || ogImage!);
     }
 
     // Set structured data (supports single object or array)
@@ -98,7 +176,7 @@ const SEOHead = ({
         document.head.appendChild(script);
       });
     }
-  }, [title, description, keywords, canonical, ogTitle, ogDescription, ogImage, structuredData]);
+  }, [title, description, keywords, canonical, ogTitle, ogDescription, ogImage, ogType, twitterTitle, twitterDescription, twitterImage, structuredData, noIndex, noFollow, articlePublishedTime, articleModifiedTime, articleAuthor, articleSection, articleTag]);
 
   return null;
 };

@@ -11,10 +11,11 @@ import CountryServicePage from "./pages/CountryServicePage";
 import CountryServicesPage from "./pages/CountryServicesPage";
 import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
-import PortfolioPage from "./pages/PortfolioPage";
 import BlogPage from "./pages/BlogPage";
 import FAQPage from "./pages/FAQPage";
 import NotFound from "./pages/NotFound";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsOfService from "./pages/TermsOfService";
 
 const queryClient = new QueryClient();
 
@@ -31,8 +32,10 @@ const App = () => (
           <Route path="/contact" element={<ContactPage />} />
           {/* <Route path="/portfolio" element={<PortfolioPage />} /> */}
           {/* <Route path="/blog" element={<BlogPage />} /> */}
-          <Route path="/faq" element={<FAQPage />} />
-          
+          {/* <Route path="/faq" element={<FAQPage />} /> */}
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms" element={<TermsOfService />} />
+
           {/* Service-only pages */}
           <Route path="/web-development" element={<ServicePage service="web-development" />} />
           <Route path="/mobile-app-development" element={<ServicePage service="mobile-app-development" />} />
@@ -40,7 +43,7 @@ const App = () => (
           <Route path="/digital-marketing" element={<ServicePage service="digital-marketing" />} />
           <Route path="/ui-ux-design" element={<ServicePage service="ui-ux-design" />} />
           <Route path="/software-development" element={<ServicePage service="software-development" />} />
-          
+
           {/* Country-specific service pages - Programmatic SEO */}
           <Route path="/web-development/:country" element={<CountryServicePage service="web-development" />} />
           <Route path="/mobile-app-development/:country" element={<CountryServicePage service="mobile-app-development" />} />
@@ -48,10 +51,10 @@ const App = () => (
           <Route path="/digital-marketing/:country" element={<CountryServicePage service="digital-marketing" />} />
           <Route path="/ui-ux-design/:country" element={<CountryServicePage service="ui-ux-design" />} />
           <Route path="/software-development/:country" element={<CountryServicePage service="software-development" />} />
-          
+
           {/* Country services overview pages */}
           <Route path="/services/:country" element={<CountryServicesPage />} />
-          
+
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
