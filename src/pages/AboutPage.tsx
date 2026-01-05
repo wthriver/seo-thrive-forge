@@ -90,13 +90,13 @@ const AboutPage = () => {
       <section className="py-20 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50" />
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+          <div className="w-full w-full max-w-4xl mx-auto text-center">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 break-words leading-tight">
               <span className="bg-gradient-to-r from-slate-900 via-blue-900 to-indigo-900 bg-clip-text text-transparent">
                 About WebThriver
               </span>
             </h1>
-            <p className="text-xl md:text-2xl text-slate-600 mb-8 leading-relaxed">
+            <p className="text-xl md:text-lg md:text-2xl text-slate-600 mb-8 leading-relaxed">
               We are Bangladesh's leading digital transformation company, helping businesses thrive in the digital age with innovative web solutions and strategic digital marketing.
             </p>
           </div>
@@ -106,8 +106,8 @@ const AboutPage = () => {
       {/* Our Story Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent">
+          <div className="w-full max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent">
               Our Story
             </h2>
             <div className="prose prose-lg mx-auto text-slate-600">
@@ -128,12 +128,12 @@ const AboutPage = () => {
       {/* Our Values */}
       <section className="py-20 bg-slate-50">
         <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent">
+          <div className="w-full max-w-6xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 break-words bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent">
               Our Values
             </h2>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
               {[
                 {
                   icon: Award,
@@ -176,8 +176,8 @@ const AboutPage = () => {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <div className="w-full w-full max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl md:text-4xl sm:text-5xl font-bold text-white mb-6">
               Ready to Work Together?
             </h2>
             <p className="text-xl text-blue-100 mb-8">

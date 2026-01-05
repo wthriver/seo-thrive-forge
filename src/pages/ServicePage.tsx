@@ -73,7 +73,7 @@ const ServicePage = ({ service }: ServicePageProps) => {
   const availableCountries = seoData.countries.slice(0, 6); // Show first 6 countries
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 overflow-x-hidden">
       {serviceData && (
         <SEOHead
           title={`${serviceData.title} | Custom Web Development Company 2026`}
@@ -91,44 +91,43 @@ const ServicePage = ({ service }: ServicePageProps) => {
       <section className="py-20 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50" />
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
+          <div className="w-full max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium mb-6">
               <ServiceIcon className="w-4 h-4 mr-2" />
               Professional {serviceData.name}
             </div>
-            
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 leading-tight break-words">
               <span className="bg-gradient-to-r from-slate-900 via-blue-900 to-indigo-900 bg-clip-text text-transparent">
                 {serviceData.title} 2026
               </span>
             </h1>
-            
-            <p className="text-xl md:text-2xl text-slate-600 mb-8 leading-relaxed">
+
+            <p className="text-lg md:text-xl lg:text-2xl text-slate-600 mb-8 leading-relaxed px-2">
               {serviceData.description}
             </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Button size="lg" className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 px-8 py-4 text-lg group">
-                Get Started Today
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
-              <Button variant="outline" size="lg" className="border-2 border-slate-300 hover:border-blue-400 px-8 py-4 text-lg">
-                View Portfolio
-              </Button>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 px-4">
+              <HardLink to="/contact">
+                <Button size="lg" className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 px-8 py-4 text-lg group w-full sm:w-auto">
+                  Get Started Today
+                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </HardLink>
             </div>
 
             <div className="flex flex-wrap justify-center gap-4">
               <div className="flex items-center px-3 py-2 bg-white/60 backdrop-blur-sm rounded-full border border-slate-200">
                 <Clock className="w-4 h-4 mr-2 text-blue-600" />
-                <span className="text-slate-700 font-medium">Delivery: {serviceData.delivery_time}</span>
+                <span className="text-slate-700 font-medium text-sm">Delivery: {serviceData.delivery_time}</span>
               </div>
               <div className="flex items-center px-3 py-2 bg-white/60 backdrop-blur-sm rounded-full border border-slate-200">
                 <Star className="w-4 h-4 mr-2 text-yellow-500" />
-                <span className="text-slate-700 font-medium">5-Star Rated</span>
+                <span className="text-slate-700 font-medium text-sm">5-Star Rated</span>
               </div>
               <div className="flex items-center px-3 py-2 bg-white/60 backdrop-blur-sm rounded-full border border-slate-200">
                 <Award className="w-4 h-4 mr-2 text-green-600" />
-                <span className="text-slate-700 font-medium">500+ Projects</span>
+                <span className="text-slate-700 font-medium text-sm">500+ Projects</span>
               </div>
             </div>
           </div>
@@ -138,18 +137,18 @@ const ServicePage = ({ service }: ServicePageProps) => {
       {/* Technology Stack */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent">
+          <div className="w-full max-w-6xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent break-words">
               Technologies We Use for {serviceData.name}
             </h2>
-            
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6">
               {serviceData.technologies.map((tech, index) => (
-                <div key={index} className="text-center p-6 bg-slate-50 rounded-lg hover:bg-blue-50 transition-colors">
+                <div key={index} className="text-center p-4 md:p-6 bg-slate-50 rounded-lg hover:bg-blue-50 transition-colors">
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-lg mx-auto mb-4 flex items-center justify-center">
                     <Code className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="font-semibold text-slate-800">{tech}</h3>
+                  <h3 className="font-semibold text-slate-800 text-sm md:text-base break-words">{tech}</h3>
                 </div>
               ))}
             </div>
@@ -160,18 +159,18 @@ const ServicePage = ({ service }: ServicePageProps) => {
       {/* Features Section */}
       <section className="py-20 bg-slate-50">
         <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent">
+          <div className="w-full max-w-6xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent break-words">
               What's Included in Our {serviceData.name} Package?
             </h2>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
               {serviceData.features.map((feature, index) => (
                 <Card key={index} className="hover:shadow-lg transition-shadow">
-                  <CardContent className="p-6">
+                  <CardContent className="p-4 md:p-6">
                     <CheckCircle className="w-8 h-8 text-green-500 mb-4" />
-                    <h3 className="text-xl font-semibold mb-3">{feature}</h3>
-                    <p className="text-slate-600">Professional implementation of {feature.toLowerCase()} with industry best practices and cutting-edge technologies.</p>
+                    <h3 className="text-lg md:text-xl font-semibold mb-3">{feature}</h3>
+                    <p className="text-slate-600 text-sm md:text-base">Professional implementation of {feature.toLowerCase()} with industry best practices and cutting-edge technologies.</p>
                   </CardContent>
                 </Card>
               ))}
@@ -183,19 +182,19 @@ const ServicePage = ({ service }: ServicePageProps) => {
       {/* Our Process */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent">
+          <div className="w-full max-w-6xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent break-words">
               Our {serviceData.name} Process
             </h2>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
               {serviceData.process.map((step, index) => (
                 <div key={index} className="text-center relative">
                   <div className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white w-16 h-16 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
                     {(index + 1).toString().padStart(2, '0')}
                   </div>
-                  <h3 className="text-xl font-semibold mb-3">{step}</h3>
-                  <p className="text-slate-600">Professional {step.toLowerCase()} with attention to detail and focus on delivering exceptional results.</p>
+                  <h3 className="text-lg md:text-xl font-semibold mb-3">{step}</h3>
+                  <p className="text-slate-600 text-sm md:text-base">Professional {step.toLowerCase()} with attention to detail and focus on delivering exceptional results.</p>
                   {index < serviceData.process.length - 1 && (
                     <div className="hidden lg:block absolute top-8 left-full w-full">
                       <ArrowRight className="w-6 h-6 text-slate-300 mx-auto" />
@@ -211,23 +210,23 @@ const ServicePage = ({ service }: ServicePageProps) => {
       {/* Available Countries */}
       <section className="py-20 bg-slate-50">
         <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent">
+          <div className="w-full max-w-6xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent break-words">
               {serviceData.name} Services Available Worldwide
             </h2>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {availableCountries.map((country, index) => (
                 <Card key={index} className="hover:shadow-lg transition-shadow group cursor-pointer">
-                  <CardContent className="p-6">
+                  <CardContent className="p-4 md:p-6">
                     <HardLink to={`/${service}/${country.code}`} className="block hover:no-underline">
                       <div className="flex items-center mb-4">
                         <MapPin className="w-6 h-6 text-blue-600 mr-3" />
-                        <h3 className="text-xl font-semibold group-hover:text-blue-600 transition-colors">
+                        <h3 className="text-lg md:text-xl font-semibold group-hover:text-blue-600 transition-colors break-words">
                           {serviceData.name} in {country.name}
                         </h3>
                       </div>
-                      <p className="text-slate-600 mb-4">
+                      <p className="text-slate-600 mb-4 text-sm md:text-base">
                         Professional {serviceData.name.toLowerCase()} services tailored for the {country.name} market.
                       </p>
                       <div className="flex justify-end items-center">
@@ -254,12 +253,12 @@ const ServicePage = ({ service }: ServicePageProps) => {
       {/* Why Choose Us */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent">
+          <div className="w-full max-w-6xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent break-words">
               Why Choose WebThriver for {serviceData.name}?
             </h2>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
               {[
                 { 
                   icon: Award,
@@ -293,10 +292,10 @@ const ServicePage = ({ service }: ServicePageProps) => {
                 }
               ].map((item, index) => (
                 <Card key={index} className="hover:shadow-lg transition-shadow">
-                  <CardContent className="p-6">
+                  <CardContent className="p-4 md:p-6">
                     <item.icon className="w-12 h-12 text-blue-600 mb-4" />
-                    <h3 className="text-xl font-semibold mb-3">{item.title}</h3>
-                    <p className="text-slate-600">{item.description}</p>
+                    <h3 className="text-lg md:text-xl font-semibold mb-3">{item.title}</h3>
+                    <p className="text-slate-600 text-sm md:text-base">{item.description}</p>
                   </CardContent>
                 </Card>
               ))}
@@ -308,17 +307,17 @@ const ServicePage = ({ service }: ServicePageProps) => {
       {/* FAQ Section */}
       <section className="py-20 bg-slate-50">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent">
+          <div className="w-full max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent break-words">
               Frequently Asked Questions
             </h2>
-            
+
             <div className="space-y-6">
               {faqs.map((faq, index) => (
                 <Card key={index} className="hover:shadow-lg transition-shadow">
-                  <CardContent className="p-6">
-                    <h3 className="text-xl font-semibold mb-3 text-slate-800">{faq.question}</h3>
-                    <p className="text-slate-600 leading-relaxed">{faq.answer}</p>
+                  <CardContent className="p-4 md:p-6">
+                    <h3 className="text-lg md:text-xl font-semibold mb-3 text-slate-800">{faq.question}</h3>
+                    <p className="text-slate-600 leading-relaxed text-sm md:text-base">{faq.answer}</p>
                   </CardContent>
                 </Card>
               ))}
@@ -330,22 +329,22 @@ const ServicePage = ({ service }: ServicePageProps) => {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <div className="w-full max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 break-words">
               Ready to Get Started with {serviceData.name}?
             </h2>
-            <p className="text-xl text-blue-100 mb-8">
+            <p className="text-lg md:text-xl text-blue-100 mb-8">
               Let's discuss your {serviceData.name.toLowerCase()} project and create a solution that drives real business results.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center px-4">
               <HardLink to="/contact">
-                <Button size="lg" className="bg-white text-blue-900 hover:bg-blue-50 px-8 py-4 text-lg font-semibold">
+                <Button size="lg" className="bg-white text-blue-900 hover:bg-blue-50 px-8 py-4 text-lg font-semibold w-full sm:w-auto">
                   Start Your Project
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </HardLink>
               <HardLink to="/contact">
-                <Button variant="outline" size="lg" className="border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 text-lg">
+                <Button variant="outline" size="lg" className="border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 text-lg w-full sm:w-auto">
                   Get Free Consultation
                 </Button>
               </HardLink>

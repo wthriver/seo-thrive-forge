@@ -64,9 +64,6 @@ const NotFound = () => {
               <HardLink to="/services" className="block text-blue-600 hover:text-blue-800 transition-colors">
                 Our Services
               </HardLink>
-              <HardLink to="/portfolio" className="block text-blue-600 hover:text-blue-800 transition-colors">
-                Portfolio
-              </HardLink>
               <HardLink to="/contact" className="block text-blue-600 hover:text-blue-800 transition-colors">
                 Contact Us
               </HardLink>

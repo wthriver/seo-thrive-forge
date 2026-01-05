@@ -156,13 +156,13 @@ const ContactPage = () => {
       <section className="py-20 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50" />
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+          <div className="w-full w-full max-w-4xl mx-auto text-center">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 break-words leading-tight">
               <span className="bg-gradient-to-r from-slate-900 via-blue-900 to-indigo-900 bg-clip-text text-transparent">
                 Get In Touch
               </span>
             </h1>
-            <p className="text-xl md:text-2xl text-slate-600 mb-8 leading-relaxed">
+            <p className="text-xl md:text-lg md:text-2xl text-slate-600 mb-8 leading-relaxed">
               Ready to start your digital transformation journey? Let's discuss your project with our expert team and create something amazing together.
             </p>
           </div>
@@ -172,14 +172,14 @@ const ContactPage = () => {
       {/* Contact Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
+          <div className="w-full max-w-6xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               {/* Contact Form */}
               <Card className="bg-white/80 backdrop-blur-sm shadow-xl">
                 <CardContent className="p-8">
                   {!showSuccess ? (
                     <>
-                      <h2 className="text-3xl font-bold mb-6 text-slate-800">Send Us a Message</h2>
+                      <h2 className="text-3xl font-bold mb-6 break-words text-slate-800">Send Us a Message</h2>
                       <form
                         id="contactForm"
                         action="https://formsubmit.co/ajax/info@webthriver.com"
@@ -287,7 +287,7 @@ const ContactPage = () => {
                       <div className="w-20 h-20 bg-green-100 rounded-full mx-auto mb-6 flex items-center justify-center">
                         <CheckCircle className="w-10 h-10 text-green-600" />
                       </div>
-                      <h3 className="text-2xl font-bold text-slate-800 mb-4">
+                      <h3 className="text-xl md:text-2xl font-bold text-slate-800 mb-4">
                         Thank You!
                       </h3>
                       <p className="text-slate-600 text-lg mb-6">
@@ -308,7 +308,7 @@ const ContactPage = () => {
               {/* Contact Information */}
               <div className="space-y-8">
                 <div>
-                  <h2 className="text-3xl font-bold mb-6 text-slate-800">Contact Information</h2>
+                  <h2 className="text-3xl font-bold mb-6 break-words text-slate-800">Contact Information</h2>
                   <p className="text-slate-600 mb-8 text-lg leading-relaxed">
                     We're here to help you transform your business digitally. Reach out to us through any of the channels below, and we'll get back to you within 24 hours.
                   </p>
@@ -316,7 +316,7 @@ const ContactPage = () => {
 
                 <div className="space-y-6">
                   <Card className="hover:shadow-lg transition-shadow border-l-4 border-l-blue-600">
-                    <CardContent className="p-6">
+                    <CardContent className="p-4 md:p-6">
                       <div className="flex items-center">
                         <div className="p-3 bg-blue-100 rounded-lg mr-4">
                           <Mail className="w-6 h-6 text-blue-600" />
@@ -331,7 +331,7 @@ const ContactPage = () => {
                   </Card>
 
                   <Card className="hover:shadow-lg transition-shadow border-l-4 border-l-green-600">
-                    <CardContent className="p-6">
+                    <CardContent className="p-4 md:p-6">
                       <div className="flex items-center">
                         <div className="p-3 bg-green-100 rounded-lg mr-4">
                           <MapPin className="w-6 h-6 text-green-600" />
@@ -346,7 +346,7 @@ const ContactPage = () => {
                   </Card>
 
                   <Card className="hover:shadow-lg transition-shadow border-l-4 border-l-purple-600">
-                    <CardContent className="p-6">
+                    <CardContent className="p-4 md:p-6">
                       <div className="flex items-center">
                         <div className="p-3 bg-purple-100 rounded-lg mr-4">
                           <Clock className="w-6 h-6 text-purple-600" />
@@ -363,7 +363,7 @@ const ContactPage = () => {
 
                 {/* Services Quick Links */}
                 <div className="mt-12">
-                  <h3 className="text-xl font-bold mb-6 text-slate-800">Our Services</h3>
+                  <h3 className="text-xl font-bold mb-6 break-words text-slate-800">Our Services</h3>
                   <div className="grid grid-cols-2 gap-4">
                     {seoData.services.map((service) => (
                       <HardLink
@@ -385,8 +385,8 @@ const ContactPage = () => {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-indigo-600">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center text-white">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+          <div className="w-full w-full max-w-4xl mx-auto text-center text-white">
+            <h2 className="text-4xl md:text-4xl sm:text-5xl font-bold mb-6 break-words">
               Ready to Start Your Project?
             </h2>
             <p className="text-xl mb-8 opacity-90">

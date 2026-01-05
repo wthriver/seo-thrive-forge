@@ -29,8 +29,8 @@ const ServicesGrid = () => {
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       {featuredServices.map((service, index) => {
         const ServiceIcon = getServiceIcon(service.slug);
-        const serviceUrl = `/${service.slug}-bangladesh`;
-        
+        const serviceUrl = `/${service.slug}`;
+
         return (
           <Card 
             key={index}
@@ -69,11 +69,11 @@ const ServicesGrid = () => {
                 </ul>
               </div>
               
-              <HardLink 
+              <HardLink
                 to={serviceUrl}
                 className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 group-hover:shadow-lg transition-all text-white px-4 py-2 rounded-md font-medium flex items-center justify-center"
               >
-                Get Started
+                View Details
                 <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </HardLink>
             </CardContent>

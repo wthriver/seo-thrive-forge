@@ -47,7 +47,7 @@ const ServicesOverview = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 overflow-x-hidden">
       <SEOHead
         title="Our Services - Complete Digital Solutions | WebThriver"
         description="Comprehensive digital services including web development, mobile app development, e-commerce solutions, UI/UX design, digital marketing, and software development across Bangladesh and globally."
@@ -63,13 +63,13 @@ const ServicesOverview = () => {
       <section className="py-20 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50" />
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+          <div className="w-full w-full max-w-4xl mx-auto text-center">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 break-words leading-tight">
               <span className="bg-gradient-to-r from-slate-900 via-blue-900 to-indigo-900 bg-clip-text text-transparent">
                 Our Services
               </span>
             </h1>
-            <p className="text-xl md:text-2xl text-slate-600 mb-8 leading-relaxed">
+            <p className="text-xl md:text-lg md:text-2xl text-slate-600 mb-8 leading-relaxed">
               Comprehensive digital solutions designed to transform your business in Bangladesh
             </p>
           </div>
@@ -79,11 +79,11 @@ const ServicesOverview = () => {
       {/* Services Grid */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {seoData.services.map((service, index) => {
               const ServiceIcon = getServiceIcon(service.slug);
-              const serviceUrl = `/${service.slug}-bangladesh`;
-              
+              const serviceUrl = `/${service.slug}`;
+
               return (
                 <Card 
                   key={index}
@@ -140,21 +140,21 @@ const ServicesOverview = () => {
       {/* Industries Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
+          <div className="w-full max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent">
                 Industries We Serve
               </h2>
-              <p className="text-xl text-slate-600 max-w-2xl mx-auto">
+              <p className="text-base md:text-xl text-slate-600 max-w-2xl mx-auto">
                 Specialized solutions for diverse sectors across Bangladesh
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:p-6">
               {seoData.industries.map((industry, index) => (
                 <Card key={index} className="hover:shadow-lg transition-shadow">
                   <CardContent className="p-6 text-center">
-                    <h3 className="text-xl font-semibold mb-3">{industry.title}</h3>
+                    <h3 className="text-lg md:text-xl font-semibold mb-3">{industry.title}</h3>
                     <p className="text-slate-600">{industry.description}</p>
                   </CardContent>
                 </Card>

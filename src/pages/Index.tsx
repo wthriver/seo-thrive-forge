@@ -60,7 +60,7 @@ const Index = () => {
   const featuredServices = seoData.services.slice(0, 6);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 overflow-x-hidden">
       <SEOHead
         title="WebThriver - Custom Web Development Company | Bespoke Solutions 2026"
         description="WebThriver is a leading custom web development company specializing in bespoke websites, e-commerce, mobile apps, and digital marketing. Trusted by 500+ businesses worldwide since 2020."
@@ -74,8 +74,8 @@ const Index = () => {
       <section className="py-20 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50" />
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+          <div className="w-full w-full max-w-4xl mx-auto text-center">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 break-words leading-tight">
               <span className="bg-gradient-to-r from-slate-900 via-blue-900 to-indigo-900 bg-clip-text text-transparent">
                 Custom Web Development Company
               </span>
@@ -84,12 +84,12 @@ const Index = () => {
                 Building Bespoke Digital Solutions
               </span>
             </h1>
-            <p className="text-xl md:text-2xl text-slate-600 mb-8 leading-relaxed">
+            <p className="text-xl md:text-lg md:text-2xl text-slate-600 mb-8 leading-relaxed">
               Premier custom web development company crafting bespoke websites, e-commerce platforms, and mobile applications. Transform your business with our expert team since 2020.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <HardLink to="/contact">
+              <HardLink to="/web-development">
                 <Button size="lg" className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 px-8 py-4 text-lg group">
                   <span className="flex items-center">
                     Start Your Project
@@ -132,17 +132,17 @@ const Index = () => {
       {/* Global Reach Section */}
       <section className="py-20 bg-slate-50">
         <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
+          <div className="w-full max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent">
+              <h2 className="text-4xl md:text-4xl sm:text-5xl font-bold mb-6 break-words bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent">
                 Serving Clients Worldwide with Custom Solutions
               </h2>
-              <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+              <p className="text-base md:text-xl text-slate-600 w-full max-w-3xl mx-auto leading-relaxed">
                 As a global custom web development company, we provide bespoke digital services to businesses across the globe, with local expertise and international standards.
               </p>
             </div>
             
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:p-6">
               {featuredCountries.map((country, index) => (
                 <Card key={index} className="hover:shadow-lg transition-shadow group cursor-pointer">
                   <CardContent className="p-6 text-center">
@@ -177,10 +177,10 @@ const Index = () => {
       <section id="services" className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent">
+            <h2 className="text-4xl md:text-4xl sm:text-5xl font-bold mb-6 break-words bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent">
               Our Custom Web Development Services
             </h2>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-base md:text-xl text-slate-600 w-full max-w-3xl mx-auto leading-relaxed">
               From custom web development to complete digital transformation, our custom web development company provides comprehensive solutions that help businesses thrive in the digital age.
             </p>
           </div>
@@ -200,17 +200,17 @@ const Index = () => {
       {/* Why Choose Us Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
+          <div className="w-full max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent">
+              <h2 className="text-4xl md:text-4xl sm:text-5xl font-bold mb-6 break-words bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent">
                 Why Choose WebThriver?
               </h2>
-              <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+              <p className="text-base md:text-xl text-slate-600 w-full max-w-3xl mx-auto leading-relaxed">
                 We combine technical expertise with deep understanding of global markets to deliver solutions that drive real business growth worldwide.
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
               {[
                 { 
                   icon: Award, 
@@ -256,7 +256,7 @@ const Index = () => {
                         <item.icon className="w-8 h-8" />
                       </div>
                     </div>
-                    <h3 className="text-2xl font-bold mb-4 text-slate-800">{item.title}</h3>
+                    <h3 className="text-xl md:text-2xl font-bold mb-4 text-slate-800">{item.title}</h3>
                     <p className="text-slate-600 mb-6 leading-relaxed">{item.description}</p>
                     <div className="text-blue-600 font-bold text-lg">{item.stat}</div>
                   </CardContent>
@@ -270,23 +270,23 @@ const Index = () => {
       {/* Service Highlights */}
       <section className="py-20 bg-slate-50">
         <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
+          <div className="w-full max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent">
+              <h2 className="text-4xl md:text-4xl sm:text-5xl font-bold mb-6 break-words bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent">
                 Popular Services Worldwide
               </h2>
-              <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+              <p className="text-base md:text-xl text-slate-600 w-full max-w-3xl mx-auto leading-relaxed">
                 Our most requested services that help businesses achieve digital transformation and growth.
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
               <Card className="hover:shadow-xl transition-shadow">
                 <CardContent className="p-8 text-center">
                   <div className="p-4 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-xl w-16 h-16 mx-auto mb-6 flex items-center justify-center">
                     <Globe className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold mb-4">Web Development</h3>
+                  <h3 className="text-xl md:text-2xl font-bold mb-4">Web Development</h3>
                   <p className="text-slate-600 mb-6">Custom websites and web applications using React, Next.js, and modern frameworks.</p>
                   <HardLink to="/web-development">
                     <Button className="w-full">Learn More</Button>
@@ -299,7 +299,7 @@ const Index = () => {
                   <div className="p-4 bg-gradient-to-r from-green-600 to-emerald-600 rounded-xl w-16 h-16 mx-auto mb-6 flex items-center justify-center">
                     <Smartphone className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold mb-4">Mobile Apps</h3>
+                  <h3 className="text-xl md:text-2xl font-bold mb-4">Mobile Apps</h3>
                   <p className="text-slate-600 mb-6">Native and cross-platform mobile applications for iOS and Android platforms.</p>
                   <HardLink to="/mobile-app-development">
                     <Button className="w-full">Learn More</Button>
@@ -312,7 +312,7 @@ const Index = () => {
                   <div className="p-4 bg-gradient-to-r from-purple-600 to-pink-600 rounded-xl w-16 h-16 mx-auto mb-6 flex items-center justify-center">
                     <ShoppingCart className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold mb-4">E-commerce</h3>
+                  <h3 className="text-xl md:text-2xl font-bold mb-4">E-commerce</h3>
                   <p className="text-slate-600 mb-6">Complete online stores with payment integration and inventory management.</p>
                   <HardLink to="/ecommerce-development">
                     <Button className="w-full">Learn More</Button>
@@ -327,17 +327,17 @@ const Index = () => {
       {/* Testimonials Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
+          <div className="w-full max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent">
+              <h2 className="text-4xl md:text-4xl sm:text-5xl font-bold mb-6 break-words bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent">
                 What Our Global Clients Say
               </h2>
-              <p className="text-xl text-slate-600 max-w-2xl mx-auto">
+              <p className="text-base md:text-xl text-slate-600 max-w-2xl mx-auto">
                 Success stories from businesses across the world who have transformed their operations with our digital solutions.
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
               {seoData.testimonials.slice(0, 6).map((testimonial, index) => (
                 <Card key={index} className="hover:shadow-lg transition-shadow bg-white">
                   <CardContent className="p-8">
@@ -366,17 +366,17 @@ const Index = () => {
       {/* Industries We Serve */}
       <section className="py-20 bg-slate-50">
         <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
+          <div className="w-full max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent">
+              <h2 className="text-4xl md:text-4xl sm:text-5xl font-bold mb-6 break-words bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent">
                 Industries We Serve Globally
               </h2>
-              <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+              <p className="text-base md:text-xl text-slate-600 w-full max-w-3xl mx-auto leading-relaxed">
                 We have deep expertise across multiple industries, helping businesses of all sizes achieve their digital transformation goals worldwide.
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:p-6">
               {seoData.industries.map((industry, index) => (
                 <Card key={index} className="hover:shadow-lg transition-shadow group cursor-pointer">
                     <CardContent className="p-6 text-center">
@@ -393,11 +393,11 @@ const Index = () => {
       {/* Contact Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent">
+          <div className="w-full w-full max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl md:text-4xl sm:text-5xl font-bold mb-6 break-words bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent">
               Ready to Transform Your Business?
             </h2>
-            <p className="text-xl text-slate-600 mb-8 leading-relaxed">
+            <p className="text-base md:text-xl text-slate-600 mb-8 leading-relaxed">
               Join hundreds of successful businesses worldwide who have chosen WebThriver for their digital transformation journey.
             </p>
             
@@ -428,7 +428,7 @@ const Index = () => {
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <HardLink to="/contact">
+              <HardLink to="/web-development">
                 <Button size="lg" className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 px-8 py-4 text-lg">
                   <span className="flex items-center">
                     Start Your Project
@@ -452,8 +452,8 @@ const Index = () => {
       {/* Final CTA Section */}
       <section className="py-20 bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+          <div className="w-full w-full max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl md:text-4xl sm:text-5xl font-bold text-white mb-6">
               Ready to Scale Your Business?
             </h2>
             <p className="text-xl text-blue-100 mb-8">
