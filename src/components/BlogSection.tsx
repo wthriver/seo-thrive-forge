@@ -7,7 +7,7 @@ const BlogSection = () => {
       title: "10 Essential Features Every E-commerce Website Needs in 2026",
       excerpt: "Discover must-have features that can boost your online store's conversion rates and customer satisfaction in the evolving digital landscape.",
       author: "WebThriver Team",
-      date: "January 15, 2026",
+      date: "January 1, 2026",
       category: "E-commerce",
       readTime: "5 min read"
     },
@@ -15,7 +15,7 @@ const BlogSection = () => {
       title: "The Complete Guide to SEO for Businesses in 2026",
       excerpt: "Learn how to dominate local search results and attract more customers with our comprehensive SEO strategy guide for modern businesses.",
       author: "WebThriver Team",
-      date: "January 10, 2026",
+      date: "January 2, 2026",
       category: "Digital Marketing",
       readTime: "8 min read"
     },
