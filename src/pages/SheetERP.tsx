@@ -163,10 +163,12 @@ const SheetERP = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-              <Button size="lg" className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-lg px-8 py-6 h-auto">
-                <Download className="w-5 h-5 mr-2" />
-                Download for Desktop
-              </Button>
+               <a href="https://github.com/wthriver/sheet-erp/releases/download/v1.0.1/Sheet.ERP.Setup.1.0.0.exe" download>
+    <Button size="lg" className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-lg px-8 py-6 h-auto">
+      <Download className="w-5 h-5 mr-2" />
+      Download for Windows
+    </Button>
+  </a>
               <HardLink to="/contact">
                 <Button size="lg" variant="outline" className="text-lg px-8 py-6 h-auto border-2">
                   Contact Sales
@@ -404,10 +406,12 @@ const SheetERP = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-lg px-8 py-6 h-auto">
-                <Monitor className="w-5 h-5 mr-2" />
-                Download Desktop App
-              </Button>
+               <a href="https://github.com/wthriver/sheet-erp/releases/download/v1.0.1/Sheet.ERP.Setup.1.0.0.exe" download>
+    <Button size="lg" className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-lg px-8 py-6 h-auto">
+      <Download className="w-5 h-5 mr-2" />
+      Download for Windows
+    </Button>
+  </a>
               <HardLink to="/contact">
                 <Button size="lg" variant="outline" className="text-lg px-8 py-6 h-auto border-2">
                   Get Started Free
