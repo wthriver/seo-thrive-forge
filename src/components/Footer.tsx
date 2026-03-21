@@ -52,11 +52,18 @@ const Footer = () => {
             </ul>
 
             <div className="mt-8">
-              <h4 className="font-semibold mb-4 text-lg">Contact Info</h4>
-              <div className="text-slate-400 space-y-2">
-                <p>📧 info@webthriver.com</p>
-                <p>📍 Global Remote Team</p>
-              </div>
+              <h4 className="font-semibold mb-4 text-lg">Products</h4>
+              <ul className="space-y-3 text-slate-400">
+                <li><HardLink to="/sheet-erp" className="hover:text-white transition-colors">Sheet ERP</HardLink></li>
+              </ul>
+            </div>
+          </div>
+
+          <div>
+            <h4 className="font-semibold mb-4 text-lg">Contact Info</h4>
+            <div className="text-slate-400 space-y-2">
+              <p>📧 info@webthriver.com</p>
+              <p>📍 Global Remote Team</p>
             </div>
           </div>
         </div>

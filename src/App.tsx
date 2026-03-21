@@ -16,6 +16,7 @@ import FAQPage from "./pages/FAQPage";
 import NotFound from "./pages/NotFound";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
+import SheetERP from "./pages/SheetERP";
 
 const queryClient = new QueryClient();
 
@@ -54,6 +55,8 @@ const App = () => (
 
           {/* Country services overview pages */}
           <Route path="/services/:country" element={<CountryServicesPage />} />
+
+          <Route path="/sheet-erp" element={<SheetERP />} />
 
           <Route path="*" element={<NotFound />} />
         </Routes>

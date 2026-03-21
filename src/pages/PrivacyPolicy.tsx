@@ -1,5 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Shield, Lock, Eye, FileText } from 'lucide-react';
+import { Shield, Lock, Eye, FileText, Database } from 'lucide-react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import SEOHead from '@/components/SEOHead';
@@ -8,17 +8,17 @@ const PrivacyPolicy = () => {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "Privacy Policy - WebThriver",
-    "description": "Privacy Policy of WebThriver - Your trusted custom web development company",
+    "name": "Privacy Policy - WebThriver & Sheet ERP",
+    "description": "Privacy Policy of WebThriver and Sheet ERP - Your trusted custom web development company and free Google Sheets-based ERP solution",
     "url": "https://webthriver.com/privacy-policy"
   };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
       <SEOHead
-        title="Privacy Policy - WebThriver | Custom Web Development Company"
-        description="Read WebThriver's Privacy Policy. Learn how we protect your personal information and data. Your privacy is our priority as your trusted custom web development partner."
-        keywords="privacy policy, webthriver privacy, data protection, custom web development company privacy, data security"
+        title="Privacy Policy - WebThriver & Sheet ERP | Custom Web Development & Free ERP Solutions"
+        description="Read WebThriver and Sheet ERP's Privacy Policy. Learn how we protect your personal information and data. Your privacy is our priority as your trusted partner for web development and free ERP solutions."
+        keywords="privacy policy, webthriver privacy, sheet ERP privacy, data protection, custom web development company privacy, data security, free ERP privacy"
         canonical="https://webthriver.com/privacy-policy"
         structuredData={structuredData}
       />
@@ -59,8 +59,18 @@ const PrivacyPolicy = () => {
                   Introduction
                 </h2>
                 <p className="text-slate-600 leading-relaxed mb-4">
-                  WebThriver ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our custom web development, e-commerce, digital marketing, and other services.
+                  WebThriver and Sheet ERP ("we," "our," or "us") are committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our websites or use our services, including:
                 </p>
+                <ul className="space-y-2 text-slate-600 mb-4">
+                  <li className="flex items-start">
+                    <span className="text-blue-600 mr-2">•</span>
+                    <span><strong>WebThriver:</strong> Custom web development, e-commerce, digital marketing, mobile app development, UI/UX design, and software development services</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-blue-600 mr-2">•</span>
+                    <span><strong>Sheet ERP:</strong> Our free Google Sheets-based ERP solution for inventory management, CRM, sales, and HR management — available as both online and offline desktop applications</span>
+                  </li>
+                </ul>
                 <p className="text-slate-600 leading-relaxed">
                   By using our services, you agree to the collection and use of information in accordance with this policy. If you have any questions or concerns about our privacy practices, please contact us at info@webthriver.com.
                 </p>
@@ -102,30 +112,49 @@ const PrivacyPolicy = () => {
                   <Lock className="w-6 h-6 mr-3 text-purple-600" />
                   How We Use Your Information
                 </h2>
-                <ul className="space-y-3 text-slate-600">
-                  <li className="flex items-start">
-                    <span className="text-blue-600 mr-2">•</span>
-                    <span>To provide, maintain, and improve our custom web development, e-commerce, mobile app development, UI/UX design, digital marketing, and software development services</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-blue-600 mr-2">•</span>
-                    <span>To process project requests, quotations, and deliver agreed-upon services</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-blue-600 mr-2">•</span>
-                    <span>To communicate with you about your projects, provide updates, and respond to inquiries</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-blue-600 mr-2">•</span>
-                    <span>To send you marketing communications, newsletters, and updates about our services (with your consent)</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-blue-600 mr-2">•</span>
-                    <span>To analyze usage patterns and improve our website and service offerings</span>
-                  </li>
+<ul className="space-y-3 text-slate-600">
                   <li className="flex items-start">
                     <span className="text-blue-600 mr-2">•</span>
                     <span>To comply with legal obligations and protect our rights</span>
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            {/* Sheet ERP Data Storage */}
+            <Card className="border-l-4 border-l-emerald-600">
+              <CardContent className="p-8">
+                <h2 className="text-2xl font-bold mb-4 text-slate-800 flex items-center">
+                  <Database className="w-6 h-6 mr-3 text-emerald-600" />
+                  Sheet ERP Data Storage
+                </h2>
+                <p className="text-slate-600 leading-relaxed mb-4">
+                  Sheet ERP is designed with privacy and data ownership as core principles. Here's how we handle your data:
+                </p>
+                <ul className="space-y-3 text-slate-600">
+                  <li className="flex items-start">
+                    <span className="text-emerald-600 mr-2">•</span>
+                    <span><strong>Your Data, Your Sheets:</strong> All your business data (inventory, CRM, sales, HR) is stored directly in Google Sheets connected to your own Google Account. We do not maintain a separate database.</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-emerald-600 mr-2">•</span>
+                    <span><strong>Google Account Access:</strong> We request permission to create and manage spreadsheets in your Google Drive. This access is used solely to store and sync your Sheet ERP data.</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-emerald-600 mr-2">•</span>
+                    <span><strong>Offline Data:</strong> When using the desktop app offline, data is stored locally on your device. This local data is encrypted and only accessible by you.</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-emerald-600 mr-2">•</span>
+                    <span><strong>No Analytics on Business Data:</strong> We do not collect, analyze, or use your business data (inventory, sales, customer information, employee records) for any purpose other than providing the Sheet ERP service.</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-emerald-600 mr-2">•</span>
+                    <span><strong>Data Sync:</strong> Data syncs between the desktop app and Google Sheets when online. We use secure HTTPS connections for all data transmission.</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-emerald-600 mr-2">•</span>
+                    <span><strong>Data Portability:</strong> You can access your data anytime through Google Sheets directly, export it, or delete it. Your data is always under your control.</span>
                   </li>
                 </ul>
               </CardContent>

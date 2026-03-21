@@ -19,6 +19,7 @@ const Navigation = () => {
           <div className="hidden lg:flex space-x-8">
             <HardLink to="/" className="text-slate-600 hover:text-blue-600 transition-colors">Home</HardLink>
             <HardLink to="/services" className="text-slate-600 hover:text-blue-600 transition-colors">Services</HardLink>
+            <HardLink to="/sheet-erp" className="text-slate-600 hover:text-blue-600 transition-colors">Sheet ERP</HardLink>
             <HardLink to="/about" className="text-slate-600 hover:text-blue-600 transition-colors">About</HardLink>
             {/* <HardLink to="/portfolio" className="text-slate-600 hover:text-blue-600 transition-colors">Portfolio</HardLink> */}
             {/* <HardLink to="/blog" className="text-slate-600 hover:text-blue-600 transition-colors">Blog</HardLink> */}
@@ -49,6 +50,7 @@ const Navigation = () => {
             <div className="flex flex-col space-y-4 pt-4">
               <HardLink to="/" className="text-slate-600 hover:text-blue-600 transition-colors">Home</HardLink>
               <HardLink to="/services" className="text-slate-600 hover:text-blue-600 transition-colors">Services</HardLink>
+              <HardLink to="/sheet-erp" className="text-slate-600 hover:text-blue-600 transition-colors">Sheet ERP</HardLink>
               <HardLink to="/about" className="text-slate-600 hover:text-blue-600 transition-colors">About</HardLink>
               {/* <HardLink to="/portfolio" className="text-slate-600 hover:text-blue-600 transition-colors">Portfolio</HardLink> */}
               {/* <HardLink to="/blog" className="text-slate-600 hover:text-blue-600 transition-colors">Blog</HardLink> */}

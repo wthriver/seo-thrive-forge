@@ -1,5 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { FileText, Shield, AlertCircle, CheckCircle, Users, Globe } from 'lucide-react';
+import { FileText, Shield, AlertCircle, CheckCircle, Users, Globe, FileSpreadsheet } from 'lucide-react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import SEOHead from '@/components/SEOHead';
@@ -8,17 +8,17 @@ const TermsOfService = () => {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "Terms of Service - WebThriver",
-    "description": "Terms of Service of WebThriver - Your trusted custom web development company",
+    "name": "Terms of Service - WebThriver & Sheet ERP",
+    "description": "Terms of Service of WebThriver and Sheet ERP - Your trusted custom web development company and free Google Sheets-based ERP solution",
     "url": "https://webthriver.com/terms"
   };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
       <SEOHead
-        title="Terms of Service - WebThriver | Custom Web Development Company"
-        description="Read WebThriver's Terms of Service. Understand the terms and conditions for using our custom web development, e-commerce, and digital marketing services."
-        keywords="terms of service, webthriver terms, service agreement, custom web development company terms, legal terms"
+        title="Terms of Service - WebThriver & Sheet ERP | Custom Web Development & Free ERP Solutions"
+        description="Read WebThriver and Sheet ERP's Terms of Service. Understand the terms and conditions for using our custom web development, e-commerce, digital marketing, and free Google Sheets-based ERP services."
+        keywords="terms of service, webthriver terms, sheet ERP terms, service agreement, custom web development company terms, free ERP terms, legal terms"
         canonical="https://webthriver.com/terms"
         structuredData={structuredData}
       />
@@ -59,10 +59,23 @@ const TermsOfService = () => {
                   Acceptance of Terms
                 </h2>
                 <p className="text-slate-600 leading-relaxed mb-4">
-                  By accessing or using WebThriver's services, including our custom web development, e-commerce development, mobile app development, UI/UX design, digital marketing, and software development services, you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use our services.
+                  By accessing or using WebThriver's and Sheet ERP's services, you agree to be bound by these Terms of Service. Our services include:
+                </p>
+                <ul className="space-y-2 text-slate-600 mb-4">
+                  <li className="flex items-start">
+                    <span className="text-blue-600 mr-2">•</span>
+                    <span><strong>WebThriver:</strong> Custom web development, e-commerce development, mobile app development, UI/UX design, digital marketing, and software development services</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-blue-600 mr-2">•</span>
+                    <span><strong>Sheet ERP:</strong> Our free Google Sheets-based ERP solution for inventory management, CRM, sales, and HR management — available as both online and offline desktop applications</span>
+                  </li>
+                </ul>
+                <p className="text-slate-600 leading-relaxed mb-4">
+                  If you do not agree to these terms, please do not use our services.
                 </p>
                 <p className="text-slate-600 leading-relaxed">
-                  WebThriver reserves the right to modify these terms at any time. Continued use of our services after any changes constitutes acceptance of the updated terms. We will notify users of significant changes via email or website notices.
+                  WebThriver and Sheet ERP reserve the right to modify these terms at any time. Continued use of our services after any changes constitutes acceptance of the updated terms. We will notify users of significant changes via email or website notices.
                 </p>
               </CardContent>
             </Card>
@@ -75,34 +88,64 @@ const TermsOfService = () => {
                   Description of Services
                 </h2>
                 <p className="text-slate-600 leading-relaxed mb-4">
-                  WebThriver provides a comprehensive range of digital services including but not limited to:
+                  We provide a comprehensive range of digital services under two brands:
                 </p>
-                <ul className="space-y-3 text-slate-600">
-                  <li className="flex items-start">
-                    <span className="text-green-600 mr-2">•</span>
-                    <span><strong>Custom Web Development:</strong> Designing and developing bespoke websites and web applications using modern technologies</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-green-600 mr-2">•</span>
-                    <span><strong>E-commerce Development:</strong> Building online stores, payment integration, and inventory management systems</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-green-600 mr-2">•</span>
-                    <span><strong>Mobile App Development:</strong> Creating native and cross-platform mobile applications for iOS and Android</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-green-600 mr-2">•</span>
-                    <span><strong>UI/UX Design:</strong> Providing user experience research, interface design, and prototyping services</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-green-600 mr-2">•</span>
-                    <span><strong>Digital Marketing:</strong> Offering SEO, PPC advertising, social media marketing, and content marketing strategies</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-green-600 mr-2">•</span>
-                    <span><strong>Software Development:</strong> Developing custom software solutions, CRM systems, ERP implementations, and business automation tools</span>
-                  </li>
-                </ul>
+                <div className="space-y-4 mb-6">
+                  <div>
+                    <h3 className="font-semibold text-slate-800 mb-2">WebThriver Services</h3>
+                    <ul className="space-y-2 text-slate-600">
+                      <li className="flex items-start">
+                        <span className="text-green-600 mr-2">•</span>
+                        <span><strong>Custom Web Development:</strong> Designing and developing bespoke websites and web applications using modern technologies</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-green-600 mr-2">•</span>
+                        <span><strong>E-commerce Development:</strong> Building online stores, payment integration, and inventory management systems</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-green-600 mr-2">•</span>
+                        <span><strong>Mobile App Development:</strong> Creating native and cross-platform mobile applications for iOS and Android</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-green-600 mr-2">•</span>
+                        <span><strong>UI/UX Design:</strong> Providing user experience research, interface design, and prototyping services</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-green-600 mr-2">•</span>
+                        <span><strong>Digital Marketing:</strong> Offering SEO, PPC advertising, social media marketing, and content marketing strategies</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-green-600 mr-2">•</span>
+                        <span><strong>Software Development:</strong> Developing custom software solutions, CRM systems, ERP implementations, and business automation tools</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-slate-800 mb-2">Sheet ERP (Free Desktop Application)</h3>
+                    <ul className="space-y-2 text-slate-600">
+                      <li className="flex items-start">
+                        <span className="text-emerald-600 mr-2">•</span>
+                        <span><strong>Inventory Management:</strong> Track stock levels, manage warehouses, and automate reordering processes</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-emerald-600 mr-2">•</span>
+                        <span><strong>CRM:</strong> Manage customer relationships, track interactions, and automate follow-ups</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-emerald-600 mr-2">•</span>
+                        <span><strong>Sales Management:</strong> Streamline sales pipeline, generate quotes, and process orders</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-emerald-600 mr-2">•</span>
+                        <span><strong>HR Management:</strong> Handle employee records, attendance, leave management, and performance tracking</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-emerald-600 mr-2">•</span>
+                        <span><strong>Google Sheets Backend:</strong> All data stored directly in your Google Sheets with full offline and online capabilities</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               </CardContent>
             </Card>
 
@@ -220,6 +263,49 @@ const TermsOfService = () => {
               </CardContent>
             </Card>
 
+            {/* Sheet ERP Terms */}
+            <Card className="border-l-4 border-l-emerald-600">
+              <CardContent className="p-8">
+                <h2 className="text-2xl font-bold mb-4 text-slate-800 flex items-center">
+                  <FileSpreadsheet className="w-6 h-6 mr-3 text-emerald-600" />
+                  Sheet ERP Terms of Use
+                </h2>
+                <p className="text-slate-600 leading-relaxed mb-4">
+                  Sheet ERP is a free desktop application. By downloading or using Sheet ERP, you agree to the following additional terms:
+                </p>
+                <div className="space-y-4 text-slate-600">
+                  <div>
+                    <h3 className="font-semibold text-slate-800 mb-2">Free Application</h3>
+                    <p className="leading-relaxed">Sheet ERP is provided free of charge. There are no subscription fees, no premium tiers, and no hidden costs. You may use it for personal and commercial purposes.</p>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-slate-800 mb-2">Google Account Requirement</h3>
+                    <p className="leading-relaxed">To use Sheet ERP, you must have a Google Account. The application requires permission to create and manage spreadsheets in your Google Drive to store your business data.</p>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-slate-800 mb-2">Data Ownership</h3>
+                    <p className="leading-relaxed">All data stored through Sheet ERP remains your property. You own all the data you enter and store. We do not claim any ownership over your business data stored in Google Sheets.</p>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-slate-800 mb-2">Data Storage and Security</h3>
+                    <p className="leading-relaxed">Your data is stored in Google Sheets under your Google Account. Data security depends on your Google Account security settings. We recommend enabling two-factor authentication on your Google Account.</p>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-slate-800 mb-2">Offline Usage</h3>
+                    <p className="leading-relaxed">Sheet ERP desktop app can function offline. When offline, data is stored locally on your device. You are responsible for ensuring your device is secure and backed up.</p>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-slate-800 mb-2">No Warranty for Sheet ERP</h3>
+                    <p className="leading-relaxed">Sheet ERP is provided "as is" without warranties of any kind. While we strive to provide a reliable application, we do not guarantee uninterrupted operation, error-free performance, or fitness for a particular purpose.</p>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-slate-800 mb-2">Acceptable Use</h3>
+                    <p className="leading-relaxed">You agree not to use Sheet ERP for any illegal purposes or in violation of any applicable laws. You are responsible for ensuring your use of the application complies with all relevant regulations.</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
             {/* Limitation of Liability */}
             <Card className="border-l-4 border-l-orange-600">
               <CardContent className="p-8">
@@ -228,7 +314,7 @@ const TermsOfService = () => {
                   Limitation of Liability
                 </h2>
                 <p className="text-slate-600 leading-relaxed mb-4">
-                  To the maximum extent permitted by applicable law, WebThriver shall not be liable for:
+                  To the maximum extent permitted by applicable law, WebThriver and Sheet ERP shall not be liable for:
                 </p>
                 <ul className="space-y-3 text-slate-600">
                   <li className="flex items-start">
@@ -249,7 +335,7 @@ const TermsOfService = () => {
                   </li>
                 </ul>
                 <p className="text-slate-600 leading-relaxed mt-4">
-                  Our total liability is limited to the amount paid for the specific service in question. Some jurisdictions do not allow limitations of liability, so these limitations may not apply to you.
+                  For WebThriver services, our total liability is limited to the amount paid for the specific service in question. For Sheet ERP, which is provided free of charge, our liability is limited to direct damages arising from gross negligence or willful misconduct. Some jurisdictions do not allow limitations of liability, so these limitations may not apply to you.
                 </p>
               </CardContent>
             </Card>
@@ -260,16 +346,25 @@ const TermsOfService = () => {
                 <h2 className="text-2xl font-bold mb-4 text-slate-800">Termination</h2>
                 <div className="space-y-4 text-slate-600">
                   <div>
-                    <h3 className="font-semibold text-slate-800 mb-2">By Client</h3>
-                    <p className="leading-relaxed">You may terminate the agreement at any time. Cancellation fees may apply based on work completed and project stage. We will deliver all completed work up to the termination date.</p>
+                    <h3 className="font-semibold text-slate-800 mb-2">WebThriver Services</h3>
+                    <div className="space-y-3">
+                      <div>
+                        <h4 className="font-medium text-slate-700 mb-1">By Client</h4>
+                        <p className="leading-relaxed">You may terminate the agreement at any time. Cancellation fees may apply based on work completed and project stage. We will deliver all completed work up to the termination date.</p>
+                      </div>
+                      <div>
+                        <h4 className="font-medium text-slate-700 mb-1">By WebThriver</h4>
+                        <p className="leading-relaxed">We reserve the right to terminate services for non-payment, violation of these terms, or any other reasonable cause. We will provide notice and deliver completed work where applicable.</p>
+                      </div>
+                      <div>
+                        <h4 className="font-medium text-slate-700 mb-1">Effect of Termination</h4>
+                        <p className="leading-relaxed">Upon termination, all outstanding fees become immediately due. You will receive deliverables completed and paid for. Ongoing support and maintenance services may be affected.</p>
+                      </div>
+                    </div>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-slate-800 mb-2">By WebThriver</h3>
-                    <p className="leading-relaxed">We reserve the right to terminate services for non-payment, violation of these terms, or any other reasonable cause. We will provide notice and deliver completed work where applicable.</p>
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-slate-800 mb-2">Effect of Termination</h3>
-                    <p className="leading-relaxed">Upon termination, all outstanding fees become immediately due. You will receive deliverables completed and paid for. Ongoing support and maintenance services may be affected.</p>
+                    <h3 className="font-semibold text-slate-800 mb-2">Sheet ERP</h3>
+                    <p className="leading-relaxed">You may stop using Sheet ERP at any time. To discontinue use, simply uninstall the application. Your data remains in your Google Sheets and can be accessed, modified, or deleted through your Google Account at any time. We may discontinue Sheet ERP with reasonable notice.</p>
                   </div>
                 </div>
               </CardContent>
@@ -329,11 +424,12 @@ const TermsOfService = () => {
               <CardContent className="p-8">
                 <h2 className="text-2xl font-bold mb-4">Contact Us</h2>
                 <p className="mb-4 opacity-90">
-                  If you have any questions about these Terms of Service or our services, please contact us:
+                  If you have any questions about these Terms of Service, our services (WebThriver), or Sheet ERP, please contact us:
                 </p>
                 <div className="space-y-2">
                   <p className="font-semibold">Email: info@webthriver.com</p>
                   <p>Website: https://webthriver.com</p>
+                  <p>Sheet ERP: https://webthriver.com/sheet-erp</p>
                 </div>
               </CardContent>
             </Card>
